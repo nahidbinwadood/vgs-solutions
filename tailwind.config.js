@@ -8,6 +8,9 @@ export default {
       },
       colors: {
         primary: '#1CA8CB',
+        textColor:"#5A5C5F",
+        primaryBg:"#EEFCFD",
+        border:"#5A5C5F",
       },
     },
   },

@@ -95,10 +95,11 @@ const Hero = () => {
               <svg viewBox="0 0 100 100">
                 <path
                   id="textPath"
-                  d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"
+                  //   d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"
+                  d="M50,50 m-35,0 a35,35 0 1,1 70,0 a35,35 0 1,1 -70,0"
                   fill="none"
                 />
-                <text className="text-[0.38em] fill-white font-semibold">
+                <text className="text-[0.4em] fill-white">
                   <textPath xlinkHref="#textPath" startOffset="0%">
                     {repeatedText}
                   </textPath>
