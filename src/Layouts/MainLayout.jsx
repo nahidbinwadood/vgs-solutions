@@ -8,10 +8,10 @@ const MainLayout = () => {
       <nav>
         <Navbar />
       </nav>
-      <main>
+      <main className="font-poppins">
         <Outlet />
       </main>
-      <footer className="container mx-auto">
+      <footer>
         <Footer />
       </footer>
     </>

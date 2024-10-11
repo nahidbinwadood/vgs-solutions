@@ -10,6 +10,7 @@ export default {
         primary: '#1CA8CB',
         textColor:"#5A5C5F",
         primaryBg:"#EEFCFD",
+        secondaryBg:"#0E323E",
         border:"#5A5C5F",
       },
     },
