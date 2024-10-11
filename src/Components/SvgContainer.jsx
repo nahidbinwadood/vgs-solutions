@@ -155,3 +155,19 @@ export function ClockSvg() {
     </svg>
   );
 }
+export function HeroSpinSvg() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="68"
+      height="68"
+      viewBox="0 0 68 68"
+      fill="none"
+    >
+      <path
+        d="M34.0081 0.265625C34.5166 18.682 49.3262 33.4918 67.7428 34.0003C49.3262 34.5088 34.5166 49.3184 34.0081 67.735C33.4996 49.3184 18.6898 34.5088 0.273438 34.0003C18.6898 33.4918 33.4996 18.682 34.0081 0.265625Z"
+        fill="#18A3B6"
+      />
+    </svg>
+  );
+}

@@ -8,6 +8,7 @@ import {
   PhoneSvg,
   TwitterSvg,
 } from '../Components/SvgContainer';
+import PrimaryButton from '../Components/PrimaryButton';
 const Navbar = () => {
   const navLinks = [
     {
@@ -85,9 +86,7 @@ const Navbar = () => {
           </div>
           <div>
             <Link to="/contact-us">
-              <button className="bg-primary border border-primary hover:bg-transparent hover:text-primary duration-500 transition px-8 py-3 text-lg text-white rounded-md">
-                Contact Us
-              </button>
+              <PrimaryButton title={"Contact Us"}/>
             </Link>
           </div>
         </div>
