@@ -60,7 +60,7 @@ const Footer = () => {
               <div className="flex items-center gap-32 justify-center mt-12 w-full">
                 <div className="flex flex-col gap-3 items-center">
                   <a
-                    href="www.linkedin.com"
+                    href="https://www.linkedin.com/"
                     target="_blank"
                     className="p-4 w-fit bg-primaryColor rounded-full"
                   >
@@ -72,7 +72,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col gap-3 items-center">
                   <a
-                    href="www.twitter.com"
+                    href="https://x.com/"
                     target="_blank"
                     className="p-4 w-fit bg-primaryColor rounded-full"
                   >
@@ -84,7 +84,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col gap-3 items-center">
                   <a
-                    href="www.facebook.com"
+                    href="https://www.facebook.com/"
                     target="_blank"
                     className="p-4 w-fit bg-primaryColor rounded-full"
                   >
