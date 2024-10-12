@@ -38,7 +38,9 @@ const Services = () => {
       <div className="container mx-auto">
         <div>
           <div className="text-center space-y-2">
-            <h3 className="text-lg text-primaryColor font-semibold">Our Services</h3>
+            <h3 className="text-lg text-primaryColor font-semibold">
+              Our Services
+            </h3>
             <h2 className="text-4xl font-semibold">
               Comprehensive Global Sourcing Solutions for
             </h2>
@@ -61,9 +63,9 @@ const Services = () => {
         </div>
 
         <div className="w-full mt-8">
-          <div className='flex items-center justify-center'>
-            <Link to='/services'>
-              <PrimaryButton title={"See More"} />
+          <div className="flex items-center justify-center">
+            <Link to="/services">
+              <PrimaryButton title={'See More'} />
             </Link>
           </div>
         </div>

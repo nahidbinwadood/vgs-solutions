@@ -1,9 +1,7 @@
 import AboutUsCard from '@/Components/AboutUsCard';
 import BannerContainer from '@/Components/BannerContainer';
-import SecondaryButton from '@/Components/SecondaryButton';
 import SectionTitleContainer from '@/Components/SectionTitleContainer';
-import { Link } from 'react-router-dom';
-
+import bannerImage from '../../assets/banner-image.jpg';
 const AboutUs = () => {
   const aboutUsCardInformation = [
     {
@@ -31,7 +29,7 @@ const AboutUs = () => {
   return (
     <section>
       {/* banner */}
-      <BannerContainer title={'About Us'} />
+      <BannerContainer title={'About Us'} bannerImage={bannerImage} />
 
       {/* Contents */}
       <div className="py-32 container mx-auto">

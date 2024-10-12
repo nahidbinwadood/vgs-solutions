@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
-import bannerImage from '../assets/banner-image.jpg';
 
-const BannerContainer = ({title}) => {
+const BannerContainer = ({title,bannerImage,subTitle}) => {
   return (
     <div
       style={{
@@ -14,7 +13,7 @@ const BannerContainer = ({title}) => {
         <div className="flex items-center gap-3 justify-center mt-5">
           <h4 className="text-lg">Home</h4>
           <div className="h-4 w-[2px] bg-white"></div>
-          <h4 className="text-lg">{title}</h4>
+          <h4 className="text-lg">{subTitle}</h4>
         </div>
       </div>
     </div>

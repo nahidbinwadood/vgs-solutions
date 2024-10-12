@@ -4,7 +4,7 @@ import SecondaryButton from './SecondaryButton';
 // eslint-disable-next-line react/prop-types
 const ServiceCard = ({ title, description, image }) => {
   return (
-    <div className="rounded-xl p-6 bg-white">
+    <div className="rounded-xl p-6 bg-white shadow-[6px_6px_32px_0px_rgba(0,0,0,0.1)]">
       <div className="flex flex-col gap-4">
         <h4 className="text-2xl font-semibold">{title}</h4>
         <p className="text-textColor w-4/5 h-[70px]">{description}</p>
