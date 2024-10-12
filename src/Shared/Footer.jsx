@@ -2,14 +2,52 @@ import { Link } from 'react-router-dom';
 import footerBg from '../assets/footer-bg.jpg';
 import PrimaryButton from '../Components/PrimaryButton';
 import {
+  EmailSvg,
   FacebookSvg,
   LinkedinSvg,
   LogoSvg,
+  PhoneSvg,
   TwitterSvg,
 } from '../Components/SvgContainer';
 const Footer = () => {
+  const socialMedia = {
+    linkedin: {
+      url: 'https://www.linkedin.com',
+      icon: <LinkedinSvg />,
+    },
+    facebook: {
+      url: 'https://www.facebook.com',
+      icon: <FacebookSvg />,
+    },
+    twitter: {
+      url: 'https://www.twitter.com',
+      icon: <TwitterSvg />,
+    },
+  };
+  const navLinks = [
+    {
+      title: 'Home',
+      path: '/',
+    },
+    {
+      title: 'About Us',
+      path: '/about-us',
+    },
+    {
+      title: 'Services',
+      path: '/services',
+    },
+    {
+      title: 'Blog',
+      path: '/blog',
+    },
+    {
+      title: 'Contact',
+      path: '/contact-us',
+    },
+  ];
   return (
-    <div>
+    <div className="font-poppins">
       {/* Footer Top */}
       <section
         style={{
@@ -30,37 +68,92 @@ const Footer = () => {
 
       {/* main footer */}
       <section className=" bg-secondaryBg py-20 text-white">
-        <div className="flex items-center justify-between container mx-auto">
+        <div className="flex justify-between container mx-auto">
+          {/* Logo Section */}
           <div>
             <div className="mb-4">
               <LogoSvg />
             </div>
             <div className="space-y-2">
-              <p className="text-lg font-medium">
+              <p className="text-lg font-semibold">
                 VGS International Corporation Co. Ltd.
               </p>
               <p className="text-lg">Longbow House 20 Chiswell Street,</p>
               <p className="text-lg">London FCTY 4TW</p>
             </div>
             <div className="mt-5 flex items-center gap-3">
-              <Link
-                to="https://www.linkedin.com/"
-                className="p-2 border border-white hover:bg-primaryColor hover:border-primaryColor transition duration-300 rounded-full inline-block cursor-pointer"
+              {Object.values(socialMedia).map((media) => (
+                <Link
+                  key={media?.url}
+                  to={media?.url}
+                  className="p-2 border border-white hover:bg-primaryColor hover:border-primaryColor transition duration-300 rounded-full inline-block cursor-pointer"
+                >
+                  {media?.icon}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* NavLinks */}
+          <div>
+            <h4 className="text-xl font-semibold mb-4">Menu</h4>
+            <div className="flex flex-col gap-3">
+              {navLinks?.map((link) => (
+                <Link key={link?.path} to={link?.path}>
+                  {link?.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-xl font-semibold mb-4">Contact us</h4>
+            <div className="space-y-3">
+              <a href="tel:000 1556 5864" className="flex items-center gap-3">
+                <PhoneSvg />
+                000 1556 5864
+              </a>
+              <a
+                href="mailto:000 1556 5864"
+                className="flex items-center gap-3"
               >
-                <LinkedinSvg />
-              </Link>
-              <Link
-                to="https://www.linkedin.com/"
-                className="p-2 border border-white hover:bg-primaryColor hover:border-primaryColor transition duration-300 rounded-full inline-block cursor-pointer"
-              >
-                <TwitterSvg />
-              </Link>
-              <Link
-                to="https://www.linkedin.com/"
-                className="p-2 border border-white hover:bg-primaryColor hover:border-primaryColor transition duration-300 rounded-full inline-block cursor-pointer"
-              >
-                <FacebookSvg />
-              </Link>
+                <EmailSvg />
+                vgs@example.com
+              </a>
+            </div>
+          </div>
+
+          {/* Subscribe */}
+          <div>
+            <h4 className="text-xl font-semibold mb-4">Subscribe Form</h4>
+            <div>
+              <h5>Email</h5>
+              <div>
+                <form action="">
+                  <div className="flex items-center gap-3 mt-2">
+                    <div className="flex items-center overflow-hidden">
+                      <input
+                        className="rounded-md py-2 h-10 w-[250px]  focus:outline-none px-4 text-black text-sm"
+                        type="email"
+                        name="email"
+                        id=""
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="bg-primaryColor flex items-center justify-center h-10 border text-sm border-primaryColor hover:bg-transparent hover:border-white  duration-500 transition px-5 text-white rounded-md"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+                <div className="py-4">
+                  <p className='leading-[1.6]'>
+                    Subscribe to our newsletter. Be always in <br /> trend!
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
