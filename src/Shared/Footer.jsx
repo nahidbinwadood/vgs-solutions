@@ -39,7 +39,7 @@ const Footer = () => {
     },
     {
       title: 'Blog',
-      path: '/blog',
+      path: '/blogs',
     },
     {
       title: 'Contact',
@@ -157,7 +157,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
 
         {/* copyright */}
         <div className="py-10 mt-24 bg-secondaryBg text-white border-t border-white container mx-auto">

@@ -29,7 +29,7 @@ const AboutUs = () => {
   return (
     <section>
       {/* banner */}
-      <BannerContainer title={'About Us'} bannerImage={bannerImage} />
+      <BannerContainer title={'About Us'} subTitle={"About Us"} bannerImage={bannerImage} />
 
       {/* Contents */}
       <div className="py-32 container mx-auto">

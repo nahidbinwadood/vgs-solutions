@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import PrimaryButton from '../../../Components/PrimaryButton';
-import BlogCard from '../../../Components/BlogCard';
+import BlogCard from '@/Components/BlogCard';
+
 
 const News = () => {
   const allBlogs = [
@@ -52,7 +53,7 @@ const News = () => {
             </p>
           </div>
           <div className="w-fit text-nowrap flex items-end">
-            <Link to="/blog">
+            <Link to="/blogs">
               <PrimaryButton title={'See More'} />
             </Link>
           </div>

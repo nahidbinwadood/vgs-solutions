@@ -10,7 +10,7 @@ const BlogCard = ({ image, subTitle, title, description }) => {
     }
   }, [description]);
   return (
-    <div className="bg-white p-5 rounded-xl">
+    <div className="bg-white p-5 rounded-xl shadow-[6px_6px_32px_0px_rgba(0,0,0,0.1)]">
       <div className="h-[275px] w-full">
         <img
           className="w-full h-full object-cover rounded-lg"

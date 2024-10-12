@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import PrimaryButton from '../Components/PrimaryButton';
 import {
   ClockSvg,
   EmailSvg,
@@ -8,7 +9,6 @@ import {
   PhoneSvg,
   TwitterSvg,
 } from '../Components/SvgContainer';
-import PrimaryButton from '../Components/PrimaryButton';
 const Navbar = () => {
   const navLinks = [
     {
@@ -25,7 +25,7 @@ const Navbar = () => {
     },
     {
       title: 'Blog',
-      path: '/blog',
+      path: '/blogs',
     },
   ];
   return (
@@ -86,7 +86,7 @@ const Navbar = () => {
           </div>
           <div>
             <Link to="/contact-us">
-              <PrimaryButton title={"Contact Us"}/>
+              <PrimaryButton title={'Contact Us'} />
             </Link>
           </div>
         </div>

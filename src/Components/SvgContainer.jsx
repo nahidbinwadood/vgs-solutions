@@ -450,3 +450,37 @@ export function LogoSvg() {
     </svg>
   );
 }
+export function PaginationPrevious() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="25"
+      height="24"
+      viewBox="0 0 25 24"
+      fill="none"
+    >
+      <path
+        className="group-hover:fill-white duration-300 transition"
+        d="M15.6602 7.41L11.0802 12L15.6602 16.59L14.2502 18L8.25016 12L14.2502 6L15.6602 7.41Z"
+        fill="#18A3B6"
+      />
+    </svg>
+  );
+}
+export function PaginationNext() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="25"
+      height="24"
+      viewBox="0 0 25 24"
+      fill="none"
+    >
+      <path
+        className="group-hover:fill-white duration-300 transition"
+        d="M9.34375 7.41L13.9237 12L9.34375 16.59L10.7537 18L16.7537 12L10.7537 6L9.34375 7.41Z"
+        fill="#18A3B6"
+      />
+    </svg>
+  );
+}
