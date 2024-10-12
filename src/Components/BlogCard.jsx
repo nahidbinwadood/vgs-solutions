@@ -23,7 +23,7 @@ const BlogCard = ({ image, subTitle, title, description }) => {
         <h4 className="text-xl font-semibold">{title}</h4>
         <p className="text-textColor">
           {finalDescription ? finalDescription : description}
-          <Link className="text-black font-medium ml-2" to="blog-details">
+          <Link className="text-black font-medium ml-2" to="/blogs/blog-details">
             Read article
           </Link>
         </p>
