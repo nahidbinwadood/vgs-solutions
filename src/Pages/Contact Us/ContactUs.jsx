@@ -7,7 +7,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
+} from '../../Components/ui/select';
 import bannerImage from '../../assets/contact-banner.jpg';
 import PrimaryButton from '@/Components/PrimaryButton';
 
