@@ -1,7 +1,13 @@
 // eslint-disable-next-line react/prop-types
-const PrimaryButton = ({ title }) => {
+const PrimaryButton = ({ title, variant }) => {
   return (
-    <button className="bg-primaryColor border border-primaryColor hover:bg-transparent hover:text-primaryColor duration-500 transition px-8 py-3 text-lg text-white rounded-md">
+    <button
+      className={`bg-primaryColor border border-primaryColor  duration-500 transition px-8 py-3 text-lg text-white rounded-md ${
+        variant
+          ? 'hover:border-white hover:text-white hover:bg-transparent'
+          : 'hover:bg-transparent hover:text-primaryColor'
+      }`}
+    >
       {title}
     </button>
   );

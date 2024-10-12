@@ -11,7 +11,7 @@ const News = () => {
       title:
         'Collaboration with Thai Government to Drive Global Growth in Middle East',
       description:
-        'Leverage lower production and labor costs to significantly reduce overall expenses and maximize profit margins...',
+        'Leverage lower production and labor costs to significantly reduce overall expenses and maximize profit margins lower production and labor costs to significantly Leverage lower production and labor costs to significantly reduce overall expenses and maximize profit margins lower production and labor costs to significantly',
     },
     {
       image:
@@ -20,7 +20,7 @@ const News = () => {
       title:
         'Collaboration with Thai Government to Drive Global Growth in Middle East',
       description:
-        'Leverage lower production and labor costs to significantly reduce overall expenses and maximize profit margins...',
+        'Leverage lower production and labor costs to significantly reduce overall expenses and maximize profit margins lower production and labor costs to significantly Leverage lower production and labor costs to significantly reduce overall expenses and maximize profit margins lower production and labor costs to significantly',
     },
     {
       image:
@@ -29,7 +29,7 @@ const News = () => {
       title:
         'Collaboration with Thai Government to Drive Global Growth in Middle East',
       description:
-        'Leverage lower production and labor costs to significantly reduce overall expenses and maximize profit margins...',
+        'Leverage lower production and labor costs to significantly reduce overall expenses and maximize profit margins lower production and labor costs to significantly Leverage lower production and labor costs to significantly reduce overall expenses and maximize profit margins lower production and labor costs to significantly',
     },
   ];
   return (

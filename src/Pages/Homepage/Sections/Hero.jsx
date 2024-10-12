@@ -112,7 +112,7 @@ const Hero = () => {
         {/* Cta */}
         <div className='-mt-12'>
           <Link to="/contact-us">
-            <PrimaryButton title={'Global Offices'} />
+            <PrimaryButton title={'Global Offices'} variant={true}/>
           </Link>
         </div>
       </div>

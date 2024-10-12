@@ -1,7 +1,14 @@
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// eslint-disable-next-line react/prop-types
 const BlogCard = ({ image, subTitle, title, description }) => {
+  const [finalDescription, setFinalDescription] = useState('');
+  useEffect(() => {
+    if (description.length > 130) {
+      setFinalDescription(description.slice(0, 130) + '...');
+    }
+  }, [description]);
   return (
     <div className="bg-white p-5 rounded-xl">
       <div className="h-[275px] w-full">
@@ -15,8 +22,8 @@ const BlogCard = ({ image, subTitle, title, description }) => {
         <h5 className="text-textColor">{subTitle}</h5>
         <h4 className="text-xl font-semibold">{title}</h4>
         <p className="text-textColor">
-          {description}
-          <Link className="text-black font-medium" to="blog-details">
+          {finalDescription ? finalDescription : description}
+          <Link className="text-black font-medium ml-2" to="blog-details">
             Read article
           </Link>
         </p>

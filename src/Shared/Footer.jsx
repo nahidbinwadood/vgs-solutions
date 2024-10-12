@@ -61,13 +61,13 @@ const Footer = () => {
             sourcing solution
           </h3>
           <Link to="/contact-us">
-            <PrimaryButton title={'Contact Us'} />
+            <PrimaryButton title={'Contact Us'} variant={true} />
           </Link>
         </div>
       </section>
 
       {/* main footer */}
-      <section className=" bg-secondaryBg py-20 text-white">
+      <section className=" bg-secondaryBg pt-20 text-white">
         <div className="flex justify-between container mx-auto">
           {/* Logo Section */}
           <div>
@@ -149,13 +149,21 @@ const Footer = () => {
                   </div>
                 </form>
                 <div className="py-4">
-                  <p className='leading-[1.6]'>
+                  <p className="leading-[1.6]">
                     Subscribe to our newsletter. Be always in <br /> trend!
                   </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+
+        {/* copyright */}
+        <div className="py-10 mt-24 bg-secondaryBg text-white border-t border-white container mx-auto">
+          <p className="text-center">
+            © All rights reserved. • VGS International Corporation
+          </p>
         </div>
       </section>
     </div>

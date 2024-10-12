@@ -55,7 +55,7 @@ const Choose = () => {
             </div>
             <div className="w-full flex flex-col gap-10">
               <div className="flex flex-col gap-2">
-                <h4 className="font-semibold">
+                <h4 className="font-semibold text-lg">
                   Earning and Maintaining Your Trust
                 </h4>
                 <p className="text-textColor w-3/4">
@@ -65,7 +65,9 @@ const Choose = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                <h4 className="font-semibold">Confidently Partner with Us</h4>
+                <h4 className="font-semibold text-lg">
+                  Confidently Partner with Us
+                </h4>
                 <p className="text-textColor w-3/4">
                   By choosing us as their sourcing partner, you can be confident
                   that your business is in capable, trustworthy hands. Your
@@ -73,7 +75,7 @@ const Choose = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                <h4 className="font-semibold">
+                <h4 className="font-semibold text-lg">
                   Tailored Solutions Through Knowledge and Network
                 </h4>
                 <p className="text-textColor w-3/4">
