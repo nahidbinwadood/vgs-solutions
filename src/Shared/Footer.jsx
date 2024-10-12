@@ -105,14 +105,16 @@ const Footer = () => {
           }}
           className="h-[500px] bg-cover bg-center bg-no-repeat text-white font-poppins flex w-full items-center justify-center text-center"
         >
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 items-center justify-center">
             <h3 className="text-5xl w-2/3 mx-auto font-semibold leading-[1.3]">
               Discovering the right product for your business with our valuable
               sourcing solution
             </h3>
-            <Link to="/contact-us">
-              <PrimaryButton title={'Contact Us'} variant={true} />
-            </Link>
+            <div className="w-fit items-center justify-center">
+              <Link to="/contact-us">
+                <PrimaryButton title={'Contact Us'} variant={true} />
+              </Link>
+            </div>
           </div>
         </section>
       )}
