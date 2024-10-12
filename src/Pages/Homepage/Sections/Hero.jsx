@@ -42,7 +42,7 @@ const Hero = () => {
             Your Trusted partner in global <br /> supply chain solutions
           </h1>
         </div>
-        <p className="w-2/3 pt-5">
+        <p className="w-2/3 pt-5 text-lg">
           Experience seamless supply chain management with our expert solutions.
           We ensure cost savings, risk mitigation, and consistent quality
           through our global network of trusted suppliers.
@@ -50,7 +50,7 @@ const Hero = () => {
 
         <div className="flex items-center justify-between">
           {/* review */}
-          <div className="mt-16">
+          <div className="">
             <div className="flex items-center gap-8">
               <div className="flex items-center w-fit relative ">
                 {reviewImages?.map((review) => (
@@ -110,7 +110,7 @@ const Hero = () => {
         </div>
 
         {/* Cta */}
-        <div>
+        <div className='-mt-12'>
           <Link to="/contact-us">
             <PrimaryButton title={'Global Offices'} />
           </Link>

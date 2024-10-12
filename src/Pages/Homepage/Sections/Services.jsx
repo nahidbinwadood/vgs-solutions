@@ -38,11 +38,11 @@ const Services = () => {
       <div className="container mx-auto">
         <div>
           <div className="text-center space-y-2">
-            <h3 className="text-lg text-primary">Services</h3>
+            <h3 className="text-lg text-primaryColor font-semibold">Our Services</h3>
             <h2 className="text-4xl font-semibold">
               Comprehensive Global Sourcing Solutions for
             </h2>
-            <h2 className="text-4xl font-semibold text-primary">
+            <h2 className="text-4xl font-semibold text-primaryColor">
               Optimal Business Performance
             </h2>
           </div>

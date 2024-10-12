@@ -12,9 +12,9 @@ const BlogCard = ({ image, subTitle, title, description }) => {
         />
       </div>
       <div className="mt-5 flex flex-col gap-2">
-        <h5 className="text-border">{subTitle}</h5>
+        <h5 className="text-textColor">{subTitle}</h5>
         <h4 className="text-xl font-semibold">{title}</h4>
-        <p className="text-border">
+        <p className="text-textColor">
           {description}
           <Link className="text-black font-medium" to="blog-details">
             Read article

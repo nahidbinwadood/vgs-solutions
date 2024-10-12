@@ -45,19 +45,19 @@ const Footer = () => {
             <div className="mt-5 flex items-center gap-3">
               <Link
                 to="https://www.linkedin.com/"
-                className="p-2 border border-white hover:bg-primary hover:border-primary transition duration-300 rounded-full inline-block cursor-pointer"
+                className="p-2 border border-white hover:bg-primaryColor hover:border-primaryColor transition duration-300 rounded-full inline-block cursor-pointer"
               >
                 <LinkedinSvg />
               </Link>
               <Link
                 to="https://www.linkedin.com/"
-                className="p-2 border border-white hover:bg-primary hover:border-primary transition duration-300 rounded-full inline-block cursor-pointer"
+                className="p-2 border border-white hover:bg-primaryColor hover:border-primaryColor transition duration-300 rounded-full inline-block cursor-pointer"
               >
                 <TwitterSvg />
               </Link>
               <Link
                 to="https://www.linkedin.com/"
-                className="p-2 border border-white hover:bg-primary hover:border-primary transition duration-300 rounded-full inline-block cursor-pointer"
+                className="p-2 border border-white hover:bg-primaryColor hover:border-primaryColor transition duration-300 rounded-full inline-block cursor-pointer"
               >
                 <FacebookSvg />
               </Link>

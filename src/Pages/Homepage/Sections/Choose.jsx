@@ -19,14 +19,14 @@ const Choose = () => {
         </div>
         <div className="w-1/2">
           <div className="space-y-2">
-            <h3 className="text-lg text-primary font-semibold">
+            <h3 className="text-lg text-primaryColor font-semibold">
               Why Choose us
             </h3>
             <h4 className="text-4xl font-semibold">Why Trust VGS for Your</h4>
-            <h4 className="text-4xl font-semibold text-primary">
+            <h4 className="text-4xl font-semibold text-primaryColor">
               Sourcing Solutions?
             </h4>
-            <p className="text-border w-3/4">
+            <p className="text-textColor w-3/4">
               Choose VGS for expert global sourcing solutions that minimize
               risks, maximize opportunities, and ensure reliable, cost-effective
               supplier partnerships. Our dedicated team provides tailored
@@ -36,19 +36,19 @@ const Choose = () => {
           <div className="w-full pt-10 flex gap-6">
             <div className="w-[10%] h-full">
               <div>
-                <div className="p-4 rounded-full bg-primary">
+                <div className="p-4 rounded-full bg-primaryColor">
                   <EarningSvg />
                 </div>
                 <div className="w-full flex items-center justify-center">
-                  <div className="h-[80px] w-[2px] bg-primary"></div>
+                  <div className="h-[80px] w-[2px] bg-primaryColor"></div>
                 </div>
-                <div className="p-4 rounded-full bg-primary">
+                <div className="p-4 rounded-full bg-primaryColor">
                   <PartnerSvg />
                 </div>
                 <div className="w-full flex items-center justify-center">
-                  <div className="h-[80px] w-[2px] bg-primary"></div>
+                  <div className="h-[80px] w-[2px] bg-primaryColor"></div>
                 </div>
-                <div className="p-4 rounded-full bg-primary">
+                <div className="p-4 rounded-full bg-primaryColor">
                   <NetworkSvg />
                 </div>
               </div>
@@ -58,7 +58,7 @@ const Choose = () => {
                 <h4 className="font-semibold">
                   Earning and Maintaining Your Trust
                 </h4>
-                <p className="text-border w-3/4">
+                <p className="text-textColor w-3/4">
                   We understand that trust is fundamental to a successful
                   partnership, and we are committed to earning and maintaining
                   that trust with our clients.
@@ -66,7 +66,7 @@ const Choose = () => {
               </div>
               <div className="flex flex-col gap-2">
                 <h4 className="font-semibold">Confidently Partner with Us</h4>
-                <p className="text-border w-3/4">
+                <p className="text-textColor w-3/4">
                   By choosing us as their sourcing partner, you can be confident
                   that your business is in capable, trustworthy hands. Your
                   business is Our Business!!
@@ -76,7 +76,7 @@ const Choose = () => {
                 <h4 className="font-semibold">
                   Tailored Solutions Through Knowledge and Network
                 </h4>
-                <p className="text-border w-3/4">
+                <p className="text-textColor w-3/4">
                   With our knowledge and a vast network of reliable suppliers,
                   we strive to deliver high-quality products tailored to your
                   needs. We prioritize transparency and timely communication in

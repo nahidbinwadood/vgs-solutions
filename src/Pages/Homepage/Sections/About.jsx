@@ -5,10 +5,10 @@ const About = () => {
   return (
     <section className="py-20 container mx-auto flex items-center">
       <div className="w-1/2 h-full font-poppins  flex flex-col gap-2">
-        <h2 className="text-primary font-semibold text-lg">About Us</h2>
+        <h2 className="text-primaryColor font-semibold text-lg">About Us</h2>
         <h3 className="text-4xl font-semibold w-[85%] leading-[1.2] ">
           Simplifying Global Sourcing <br /> for Your
-          <span className="text-primary ml-2">Business Success</span>
+          <span className="text-primaryColor ml-2">Business Success</span>
         </h3>
         <p className="text-textColor w-3/4 pt-3">
           Navigating international business is challenging with cultural

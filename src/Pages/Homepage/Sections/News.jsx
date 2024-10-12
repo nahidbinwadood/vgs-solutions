@@ -37,14 +37,14 @@ const News = () => {
       <div className="container mx-auto">
         <div className="flex">
           <div className="flex flex-col gap-2">
-            <h3 className="text-lg text-primary font-semibold">
+            <h3 className="text-lg text-primaryColor font-semibold">
               News & Activities
             </h3>
             <h4 className="text-4xl font-semibold">Explore Our Latest</h4>
-            <h4 className="text-4xl font-semibold text-primary">
+            <h4 className="text-4xl font-semibold text-primaryColor">
               Updates and Activities
             </h4>
-            <p className="text-border w-1/2 mt-3">
+            <p className="text-textColor w-1/2 mt-3">
               Stay connected with VGS for the latest news and activities.
               Discover our achievements, industry insights, and upcoming events
               as we continue to innovate and enhance global sourcing solutions
