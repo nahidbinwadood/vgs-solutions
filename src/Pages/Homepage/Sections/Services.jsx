@@ -52,9 +52,9 @@ const Services = () => {
 
         {/* card section */}
         <div className="mt-16 grid grid-cols-2 gap-8">
-          {ServiceCardInfo?.map((service) => (
+          {ServiceCardInfo?.map((service,idx) => (
             <ServiceCard
-              key={service?.title}
+              key={idx}
               title={service?.title}
               description={service?.description}
               image={service?.image}

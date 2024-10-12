@@ -6,7 +6,13 @@ const SectionTitleContainer = ({ title, highlightedTitle, description }) => {
       <h2 className="text-4xl font-semibold text-primaryColor">
         {highlightedTitle}
       </h2>
-      <p className="w-2/3 mt-2 text-textColor">{description && description}</p>
+      <p
+        className={`w-2/3 mt-2 text-textColor ${
+          description ? 'block' : 'hidden'
+        }`}
+      >
+        {description && description}
+      </p>
     </div>
   );
 };

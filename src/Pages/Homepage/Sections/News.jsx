@@ -61,9 +61,9 @@ const News = () => {
 
         {/* Card Section */}
         <div className="pt-10 grid grid-cols-3 gap-8">
-          {allBlogs?.map((blog) => (
+          {allBlogs?.map((blog,idx) => (
             <BlogCard
-              key={blog?.title}
+              key={idx}
               image={blog?.image}
               subTitle={blog?.subTitle}
               title={blog?.title}

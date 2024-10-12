@@ -2,8 +2,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const BlogCard = ({ image, subTitle, title, description }) => {
+const BlogCard = ({ id, image, subTitle, title, description }) => {
   const [finalDescription, setFinalDescription] = useState('');
+
   useEffect(() => {
     if (description.length > 130) {
       setFinalDescription(description.slice(0, 130) + '...');
@@ -23,7 +24,10 @@ const BlogCard = ({ image, subTitle, title, description }) => {
         <h4 className="text-xl font-semibold">{title}</h4>
         <p className="text-textColor">
           {finalDescription ? finalDescription : description}
-          <Link className="text-black font-medium ml-2" to="/blogs/blog-details">
+          <Link
+            to={`/blog-details/${id}`}
+            className="text-black font-medium ml-2"
+          >
             Read article
           </Link>
         </p>

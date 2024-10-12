@@ -84,9 +84,9 @@ const Services = () => {
 
         {/* Services Cards */}
         <div className="grid grid-cols-2 gap-10">
-          {ServiceCardInfo?.map((service) => (
+          {ServiceCardInfo?.map((service,idx) => (
             <ServiceCard
-              key={service?.title}
+              key={idx}
               title={service?.title}
               description={service?.description}
               image={service?.image}

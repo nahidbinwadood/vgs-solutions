@@ -17,8 +17,8 @@ const Sponsors = () => {
   return (
     <section className="container mx-auto py-20 overflow-hidden">
       <Marquee autoFill={true} speed={80}>
-        {[...sponsors, ...sponsors].map((item) => (
-          <div key={item.key} className="mr-24">
+        {[...sponsors, ...sponsors].map((item,idx) => (
+          <div key={idx} className="mr-24">
             {item}
           </div>
         ))}
