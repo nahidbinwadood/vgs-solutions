@@ -17,6 +17,19 @@
   animation: spin-slow 20s linear infinite;
 }
 
+input[type="checkbox"].peer:checked::before {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin-left: 1px;
+  margin-right: 1px;
+  background-color: #22c55e; /* Green color for the small box */
+  border-radius: 2px;
+}
+
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

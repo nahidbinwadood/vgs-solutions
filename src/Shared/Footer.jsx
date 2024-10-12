@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import footerBg from '../assets/footer-bg.jpg';
 import PrimaryButton from '../Components/PrimaryButton';
 import {
@@ -46,25 +46,76 @@ const Footer = () => {
       path: '/contact-us',
     },
   ];
+
+  const location = useLocation();
+  const isContactPage = location.pathname === '/contact-us';
   return (
     <div className="font-poppins">
       {/* Footer Top */}
-      <section
-        style={{
-          backgroundImage: `linear-gradient(180deg, rgba(0, 25, 29, 0.8), rgba(0, 25, 29, 0.6)), url(${footerBg})`,
-        }}
-        className="h-[500px] bg-cover bg-center bg-no-repeat text-white font-poppins flex w-full items-center justify-center text-center"
-      >
-        <div className="flex flex-col gap-10">
-          <h3 className="text-5xl w-2/3 mx-auto font-semibold leading-[1.3]">
-            Discovering the right product for your business with our valuable
-            sourcing solution
-          </h3>
-          <Link to="/contact-us">
-            <PrimaryButton title={'Contact Us'} variant={true} />
-          </Link>
-        </div>
-      </section>
+      {isContactPage ? (
+        <section className="h-[500px] bg-primaryBg font-poppins flex w-full items-center justify-center text-center">
+          <div className="flex flex-col gap-10 w-full container mx-auto">
+            <div>
+              <h3 className="text-4xl font-semibold text">Follow us</h3>
+              <div className="flex items-center gap-32 justify-center mt-12 w-full">
+                <div className="flex flex-col gap-3 items-center">
+                  <a
+                    href="www.linkedin.com"
+                    target="_blank"
+                    className="p-4 w-fit bg-primaryColor rounded-full"
+                  >
+                    <LinkedinSvg />
+                  </a>
+                  <div>
+                    <p className="font-medium">VGS International Corporation</p>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-3 items-center">
+                  <a
+                    href="www.twitter.com"
+                    target="_blank"
+                    className="p-4 w-fit bg-primaryColor rounded-full"
+                  >
+                    <TwitterSvg />
+                  </a>
+                  <div>
+                    <p className="font-medium">VGS International Corporation</p>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-3 items-center">
+                  <a
+                    href="www.facebook.com"
+                    target="_blank"
+                    className="p-4 w-fit bg-primaryColor rounded-full"
+                  >
+                    <FacebookSvg />
+                  </a>
+                  <div>
+                    <p className="font-medium">VGS International Corporation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : (
+        <section
+          style={{
+            backgroundImage: `linear-gradient(180deg, rgba(0, 25, 29, 0.8), rgba(0, 25, 29, 0.6)), url(${footerBg})`,
+          }}
+          className="h-[500px] bg-cover bg-center bg-no-repeat text-white font-poppins flex w-full items-center justify-center text-center"
+        >
+          <div className="flex flex-col gap-10">
+            <h3 className="text-5xl w-2/3 mx-auto font-semibold leading-[1.3]">
+              Discovering the right product for your business with our valuable
+              sourcing solution
+            </h3>
+            <Link to="/contact-us">
+              <PrimaryButton title={'Contact Us'} variant={true} />
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* main footer */}
       <section className=" bg-secondaryBg pt-20 text-white">
