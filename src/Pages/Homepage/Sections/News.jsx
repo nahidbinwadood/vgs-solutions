@@ -39,18 +39,18 @@ const News = () => {
     },
   ];
   return (
-    <div className="bg-primaryBg py-20 hidden">
+    <div className="bg-primaryBg py-8 sm:py-10 md:py-14 lg:py-16 xl:py-20 px-5 md:px-7">
       <div className="container mx-auto">
-        <div className="flex">
-          <div className="flex flex-col gap-2">
-            <h3 className="text-lg text-primaryColor font-semibold">
+        <div className="flex flex-col gap-2 md:flex-row sm:gap-3 md:gap-5">
+          <div className="flex flex-col gap-1 ">
+            <h3 className="md:text-lg text-primaryColor font-semibold">
               News & Activities
             </h3>
-            <h4 className="text-4xl font-semibold">Explore Our Latest</h4>
-            <h4 className="text-4xl font-semibold text-primaryColor">
+            <h4 className="text-2xl md:text-3xl lg:text-4xl font-semibold">Explore Our Latest</h4>
+            <h4 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primaryColor">
               Updates and Activities
             </h4>
-            <p className="text-textColor w-1/2 mt-3">
+            <p className="text-textColor lg:w-1/2 text-sm md:text-base mt-2 md:mt-3">
               Stay connected with VGS for the latest news and activities.
               Discover our achievements, industry insights, and upcoming events
               as we continue to innovate and enhance global sourcing solutions
@@ -59,13 +59,13 @@ const News = () => {
           </div>
           <div className="w-fit text-nowrap flex items-end">
             <Link to="/blogs">
-              <PrimaryButton title={'See More'} />
+              <PrimaryButton title={'See More'} mobile={true} universal={true} />
             </Link>
           </div>
         </div>
 
         {/* Card Section */}
-        <div className="pt-10 grid grid-cols-3 gap-8">
+        <div className="pt-6 md:pt-8 lg:pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 xl:gap-8 items-center">
           {allBlogs?.map((blog, idx) => (
             <BlogCard
               key={idx}

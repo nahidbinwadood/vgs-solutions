@@ -7,7 +7,7 @@ const ServiceCard = ({ title, description, image }) => {
     <div className="rounded-xl p-4 md:p-6 bg-white shadow-[6px_6px_32px_0px_rgba(0,0,0,0.1)]">
       <div className="flex flex-col gap-2 md:gap-4">
         <h4 className="text-xl md:text-2xl font-semibold">{title}</h4>
-        <p className="text-sm md:text-base text-textColor lg:w-4/5 md:h-[110px] lg:h-[70px] pb-2">{description}</p>
+        <p className="text-sm md:text-base text-textColor lg:w-4/5 md:h-[110px] lg:h-[90px] xl:h-auto pb-2">{description}</p>
         <Link to='/contact-us'  >
           <SecondaryButton title={'Contact Now'} universal={true} />
         </Link>
