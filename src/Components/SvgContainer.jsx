@@ -352,6 +352,7 @@ export function SponsorLogo5() {
 export function EarningSvg() {
   return (
     <svg
+      className="size-5 sm:size-6 md:size-7 lg:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
@@ -376,6 +377,7 @@ export function EarningSvg() {
 export function PartnerSvg() {
   return (
     <svg
+      className="size-5 sm:size-6 md:size-7 lg:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
@@ -399,6 +401,7 @@ export function PartnerSvg() {
 export function NetworkSvg() {
   return (
     <svg
+      className="size-5 sm:size-6 md:size-7 lg:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"

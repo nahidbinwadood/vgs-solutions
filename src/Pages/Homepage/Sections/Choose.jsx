@@ -6,9 +6,9 @@ import {
 
 const Choose = () => {
   return (
-    <div className="container mx-auto py-20 font-poppins hidden">
-      <div className="flex gap-12">
-        <div className="w-1/2">
+    <div className="py-8 sm:py-10 md:py-14 lg:py-16 xl:py-20 container mx-auto px-5 md:px-7">
+      <div className="flex items-stretch flex-col lg:flex-row gap-6 lg:gap-12">
+        <div className="lg:w-1/2">
           <div className="h-full">
             <img
               className="h-full object-cover rounded-xl"
@@ -17,68 +17,76 @@ const Choose = () => {
             />
           </div>
         </div>
-        <div className="w-1/2">
-          <div className="space-y-2">
-            <h3 className="text-lg text-primaryColor font-semibold">
+        <div className="lg:w-1/2">
+          <div className="md:space-y-2">
+            <h3 className="md:text-lg text-primaryColor font-semibold">
               Why Choose us
             </h3>
-            <h4 className="text-4xl font-semibold">Why Trust VGS for Your</h4>
-            <h4 className="text-4xl font-semibold text-primaryColor">
+            <h4 className="text-2xl md:text-3xl lg:text-4xl font-semibold pt-1 md:pt-0">
+              Why Trust VGS for Your
+            </h4>
+            <h4 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primaryColor">
               Sourcing Solutions?
             </h4>
-            <p className="text-textColor w-3/4">
+            <p className="text-textColor text-sm md:text-base xl:w-3/4 pt-2">
               Choose VGS for expert global sourcing solutions that minimize
               risks, maximize opportunities, and ensure reliable, cost-effective
               supplier partnerships. Our dedicated team provides tailored
               strategies for your business&apos;s growth and success.
             </p>
           </div>
-          <div className="w-full pt-10 flex gap-6">
-            <div className="w-[10%] h-full">
+          <div className="w-full pt-6 md:pt-10 flex gap-4">
+            <div className="w-[12%] h-full hidden md:flex items-center justify-center">
               <div>
-                <div className="p-4 rounded-full bg-primaryColor">
-                  <EarningSvg />
+                <div className="w-full flex items-center justify-center">
+                  <div className="p-3 rounded-full bg-primaryColor">
+                    <EarningSvg />
+                  </div>
                 </div>
                 <div className="w-full flex items-center justify-center">
-                  <div className="h-[80px] w-[2px] bg-primaryColor"></div>
-                </div>
-                <div className="p-4 rounded-full bg-primaryColor">
-                  <PartnerSvg />
+                  <div className="h-[70px] lg:h-[105px] 2xl:h-[85px] w-[2px] bg-primaryColor"></div>
                 </div>
                 <div className="w-full flex items-center justify-center">
-                  <div className="h-[80px] w-[2px] bg-primaryColor"></div>
+                  <div className="p-3 rounded-full bg-primaryColor">
+                    <PartnerSvg />
+                  </div>
                 </div>
-                <div className="p-4 rounded-full bg-primaryColor">
-                  <NetworkSvg />
+                <div className="w-full flex items-center justify-center">
+                  <div className="h-[70px] lg:h-[105px] 2xl:h-[75px] w-[2px] bg-primaryColor"></div>
+                </div>
+                <div className="w-full flex items-center justify-center">
+                  <div className="p-3 rounded-full bg-primaryColor">
+                    <NetworkSvg />
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="w-full flex flex-col gap-10">
-              <div className="flex flex-col gap-2">
-                <h4 className="font-semibold text-lg">
+            <div className="w-full flex flex-col gap-5 md:gap-10 lg:gap-8">
+              <div className="flex flex-col gap-1 md:gap-2">
+                <h4 className="font-semibold md:text-lg">
                   Earning and Maintaining Your Trust
                 </h4>
-                <p className="text-textColor w-3/4">
+                <p className="text-textColor text-sm md:text-base xl:w-3/4">
                   We understand that trust is fundamental to a successful
                   partnership, and we are committed to earning and maintaining
                   that trust with our clients.
                 </p>
               </div>
-              <div className="flex flex-col gap-2">
-                <h4 className="font-semibold text-lg">
+              <div className="flex flex-col gap-1 md:gap-2">
+                <h4 className="font-semibold md:text-lg">
                   Confidently Partner with Us
                 </h4>
-                <p className="text-textColor w-3/4">
+                <p className="text-textColor text-sm md:text-base xl:w-3/4">
                   By choosing us as their sourcing partner, you can be confident
                   that your business is in capable, trustworthy hands. Your
                   business is Our Business!!
                 </p>
               </div>
-              <div className="flex flex-col gap-2">
-                <h4 className="font-semibold text-lg">
+              <div className="flex flex-col gap-1 md:gap-2">
+                <h4 className="font-semibold md:text-lg">
                   Tailored Solutions Through Knowledge and Network
                 </h4>
-                <p className="text-textColor w-3/4">
+                <p className="text-textColor text-sm md:text-base xl:w-3/4">
                   With our knowledge and a vast network of reliable suppliers,
                   we strive to deliver high-quality products tailored to your
                   needs. We prioritize transparency and timely communication in
