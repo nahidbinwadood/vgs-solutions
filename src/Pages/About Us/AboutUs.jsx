@@ -27,24 +27,24 @@ const AboutUs = () => {
     },
   ];
   return (
-    <section>
-      {/* banner */}
+    <section aria-labelledby="about-us-section">
+      {/* Banner */}
       <BannerContainer
-        title={'About Us'}
-        subTitle={'About Us'}
+        title="About Us"
+        subTitle="About Us"
         bannerImage={bannerImage}
       />
 
       {/* Contents */}
       <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7">
         {/* Title */}
-        <SectionTitleContainer
-          title={'Simplifying Global Sourcing for'}
-          highlightedTitle={'Your Business Success'}
-          description={
-            'Navigating international business is challenging with cultural differences and regulations. VGS simplifies sourcing, connecting you with reliable suppliers, so you can focus on growing your business globally.'
-          }
-        />
+        <header className="text-center">
+          <SectionTitleContainer
+            title="Simplifying Global Sourcing for"
+            highlightedTitle="Your Business Success"
+            description="Navigating international business is challenging with cultural differences and regulations. VGS simplifies sourcing, connecting you with reliable suppliers, so you can focus on growing your business globally."
+          />
+        </header>
 
         {/* About Us Cards */}
         <div className="flex flex-col gap-5 md:gap-8 lg:gap-10">
@@ -54,6 +54,7 @@ const AboutUs = () => {
               image={info?.image}
               title={info?.title}
               description={info?.description}
+              aria-label={`Read more about ${info?.title}`}
             />
           ))}
         </div>

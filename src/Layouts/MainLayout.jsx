@@ -6,15 +6,11 @@ const MainLayout = () => {
   return (
     <>
       <ScrollRestoration />
-      <nav>
-        <Navbar />
-      </nav>
+      <Navbar />
       <main className="font-poppins">
         <Outlet />
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </>
   );
 };

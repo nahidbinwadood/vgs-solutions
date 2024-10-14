@@ -16,7 +16,8 @@ const BlogCard = ({ id, image, subTitle, title, description }) => {
         <img
           className="w-full h-full object-cover rounded-lg"
           src={image}
-          alt=""
+          alt={`Image related to the blog titled: ${title}`}
+          loading="lazy"
         />
       </div>
       <div className="mt-4 md:mt-5 flex flex-col gap-[5px] md:gap-2">
@@ -26,6 +27,7 @@ const BlogCard = ({ id, image, subTitle, title, description }) => {
           {finalDescription ? finalDescription : description}
           <Link
             to={`/blog-details/${id}`}
+            aria-label={`Read the full article: ${title}`}
             className="text-black font-medium ml-2"
           >
             Read article

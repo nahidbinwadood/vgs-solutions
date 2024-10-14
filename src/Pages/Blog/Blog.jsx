@@ -75,26 +75,26 @@ const Blog = () => {
   ];
 
   return (
-    <section>
-      {/* banner */}
+    <section aria-labelledby="news-activities-section">
+      {/* Banner */}
       <BannerContainer
-        title={'News & Activities'}
-        subTitle={'Blog'}
+        title="News & Activities"
+        subTitle="Blog"
         bannerImage={bannerImage}
       />
 
       {/* Contents */}
       <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7">
         {/* Title */}
-        <SectionTitleContainer
-          title={'Explore Our Latest '}
-          highlightedTitle={'Updates and Activities'}
-          description={
-            'Stay connected with VGS for the latest news and activities. Discover our achievements, industry insights, and upcoming events as we continue to innovate and enhance global sourcing solutions for our clients.'
-          }
-        />
+        <header className="text-center">
+          <SectionTitleContainer
+            title="Explore Our Latest"
+            highlightedTitle="Updates and Activities"
+            description="Stay connected with VGS for the latest news and activities. Discover our achievements, industry insights, and upcoming events as we continue to innovate and enhance global sourcing solutions for our clients."
+          />
+        </header>
 
-        {/* Services Cards */}
+        {/* Blog Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {allBlogs?.map((blog, idx) => (
             <BlogCard
@@ -104,28 +104,39 @@ const Blog = () => {
               subTitle={blog?.subTitle}
               title={blog?.title}
               description={blog?.description}
+              aria-label={`Read more about ${blog?.title}`}
             />
           ))}
         </div>
 
         {/* Pagination */}
         <div className="w-full flex items-center justify-center pt-6 md:pt-8 lg:pt-10">
-          <div className="flex items-center gap-2 sm:gap-3">
-            <div className="border  text-xs rounded-sm md:size-8 lg:size-auto border-textColor p-1 lg:p-[7px] md:rounded-md cursor-pointer group hover:bg-primaryColor duration-300 transition hover:border-primaryColor flex items-center justify-center">
+          <nav
+            aria-label="Pagination Navigation"
+            className="flex items-center gap-2 sm:gap-3"
+          >
+            <button
+              aria-label="Previous Page"
+              className="border text-xs rounded-sm md:size-8 lg:size-auto border-textColor p-1 lg:p-[7px] md:rounded-md cursor-pointer group hover:bg-primaryColor duration-300 transition hover:border-primaryColor flex items-center justify-center"
+            >
               <PaginationPrevious />
-            </div>
+            </button>
             {[...Array(5)].map((_, index) => (
-              <div
+              <button
                 key={index}
-                className="border size-[30px] md:text-sm  md:size-8 text-xs rounded-sm lg:size-10 border-textColor p-2 md:rounded-md cursor-pointer group hover:bg-primaryColor duration-300 transition hover:border-primaryColor flex items-center justify-center hover:text-white"
+                aria-label={`Page ${index + 1}`}
+                className="border size-[30px] md:text-sm md:size-8 text-xs rounded-sm lg:size-10 border-textColor p-2 md:rounded-md cursor-pointer group hover:bg-primaryColor duration-300 transition hover:border-primaryColor flex items-center justify-center hover:text-white"
               >
                 <span>{index + 1}</span>
-              </div>
+              </button>
             ))}
-            <div className="border  text-xs rounded-sm md:size-8 lg:size-auto  border-textColor p-1 lg:p-[7px] md:rounded-md cursor-pointer group hover:bg-primaryColor duration-300 transition hover:border-primaryColor flex items-center justify-center">
+            <button
+              aria-label="Next Page"
+              className="border text-xs rounded-sm md:size-8 lg:size-auto border-textColor p-1 lg:p-[7px] md:rounded-md cursor-pointer group hover:bg-primaryColor duration-300 transition hover:border-primaryColor flex items-center justify-center"
+            >
               <PaginationNext />
-            </div>
-          </div>
+            </button>
+          </nav>
         </div>
       </div>
     </section>

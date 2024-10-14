@@ -30,20 +30,24 @@ const Hero = () => {
   const repeatedText = text.repeat(2);
   return (
     <section
+      aria-labelledby="welcome-heading"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(0, 25, 29, 0.8), rgba(0, 25, 29, 0.6)), url(${banner})`,
       }}
       className="2xl:h-[90vh] bg-cover bg-center bg-no-repeat text-white font-poppins"
     >
       <div className="container mx-auto xl:pt-32 px-5 md:px-7 py-10 sm:py-12 md:py-14 lg:py-20">
-        <div className="uppercase">
-          <h1 className="text-2xl sm:text-3xl mb-1 md:text-4xl lg:text-5xl 2xl:text-6xl leading-snug md:leading-tight">
+        <header className="uppercase">
+          <h1
+            id="welcome-heading"
+            className="text-2xl sm:text-3xl mb-1 md:text-4xl lg:text-5xl 2xl:text-6xl leading-snug md:leading-tight"
+          >
             Welcome to VGS,
           </h1>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold leading-snug md:leading-tight lg:leading-[1.2] xl:leading-[1.25]">
-            Your Trusted partner in global <br /> supply chain solutions
-          </h1>
-        </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold leading-snug md:leading-tight lg:leading-[1.2] xl:leading-[1.25]">
+            Your Trusted Partner in Global Supply Chain Solutions
+          </h2>
+        </header>
 
         <p className="lg:w-2/3 pt-5 text-sm md:text-base lg:text-lg">
           Experience seamless supply chain management with our expert solutions.
@@ -52,10 +56,10 @@ const Hero = () => {
         </p>
 
         <div className="flex lg:items-center justify-between pt-6 lg:pt-0">
-          {/* review */}
+          {/* Review Section */}
           <div className="">
             <div className="flex flex-col md:flex-row items-start lg:items-center gap-4 md:gap-8">
-              <div className="flex items-center w-fit relative ">
+              <div className="flex items-center w-fit relative">
                 {reviewImages?.map((review) => (
                   <div
                     key={review?.name}
@@ -64,13 +68,14 @@ const Hero = () => {
                     <img
                       className="h-full w-full object-cover"
                       src={review?.image}
-                      alt=""
+                      alt={`${review?.name} Review Image`}
+                      loading="lazy"
                     />
                   </div>
                 ))}
               </div>
               <div>
-                {/* stars */}
+                {/* Stars and Review Information */}
                 <div className="flex flex-col items-center justify-center gap-3">
                   <div className="flex items-center gap-3">
                     <div className="flex items-center md:gap-1">
@@ -83,7 +88,11 @@ const Hero = () => {
                   <div>
                     <div className="flex items-center gap-2">
                       <p className="text-sm md:text-base">from 100+</p>
-                      <Link to="/" className="underline text-sm md:text-base">
+                      <Link
+                        to="/reviews"
+                        className="underline text-sm md:text-base"
+                        aria-label="Read our reviews"
+                      >
                         reviews
                       </Link>
                     </div>
@@ -92,13 +101,14 @@ const Hero = () => {
               </div>
             </div>
           </div>
+
+          {/* Rotating Icon */}
           <div className="relative size-32 md:size-40 lg:size-52 xl:size-64 flex items-center justify-center -mt-3 md:-mt-5 lg:mt-5">
             <HeroSpinSvg />
             <div className="absolute inset-0 w-full h-full animate-spin-slow">
               <svg viewBox="0 0 100 100">
                 <path
                   id="textPath"
-                  //   d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"
                   d="M50,50 m-35,0 a35,35 0 1,1 70,0 a35,35 0 1,1 -70,0"
                   fill="none"
                 />
@@ -112,9 +122,12 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Cta */}
+        {/* CTA */}
         <div className="xl:-mt-12 mt-2">
-          <Link to="/contact-us">
+          <Link
+            to="/contact-us"
+            aria-label="Learn more about our global offices"
+          >
             <PrimaryButton
               title={'Global Offices'}
               variant={true}

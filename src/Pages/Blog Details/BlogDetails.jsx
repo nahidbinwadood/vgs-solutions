@@ -72,61 +72,72 @@ const BlogDetails = () => {
   const currentBlog = allBlogs?.find((blog) => blog.id == id);
   console.log(currentBlog?.title.split(' ').length);
   return (
-    <section>
-      {/* banner */}
+    <section aria-labelledby="blog-article-section">
+      {/* Banner */}
       <BannerContainer
-        title={'News & Activities'}
-        subTitle={'Blog'}
+        title="News & Activities"
+        subTitle="Blog"
         bannerImage={bannerImage}
       />
 
       {/* Contents */}
       <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7">
         {/* Title */}
-        <SectionTitleContainer
-          title={currentBlog?.title
-            .split(' ')
-            .slice(0, (Math.floor(currentBlog?.title.split(' ').length / 2)+1))
-            .join(' ')}
-          highlightedTitle={currentBlog?.title
-            .split(' ')
-            .slice((Math.floor(currentBlog?.title.split(' ').length / 2)+1))
-            .join(' ')}
-        />
+        <header>
+          <SectionTitleContainer
+            title={currentBlog?.title
+              .split(' ')
+              .slice(
+                0,
+                Math.floor(currentBlog?.title.split(' ').length / 2) + 1
+              )
+              .join(' ')}
+            highlightedTitle={currentBlog?.title
+              .split(' ')
+              .slice(Math.floor(currentBlog?.title.split(' ').length / 2) + 1)
+              .join(' ')}
+          />
+        </header>
 
-        {/* Details */}
-        <div>
+        {/* Blog Details */}
+        <article>
           <div className="h-[250px] sm:h-[300px] md:h-[450px] lg:h-[550px] xl:h-[600px] overflow-hidden">
             <img
               className="h-full w-full object-cover rounded-xl"
               src={currentBlog?.image}
-              alt=""
+              alt={`Blog Image: ${currentBlog?.title}`}
+              loading="lazy"
             />
           </div>
           <div className="text-textColor text-sm md:text-base pb-6 sm:pb-8 md:pb-10 lg:pb-14 xl:pb-20">
-            <p className="pt-3 md:pt-5">Published On: {currentBlog?.publishDate}</p>
-            <p className="pt-5 md:pt-6 lg:pt-10 leading-[1.8]">{currentBlog?.description}</p>
+            <p className="pt-3 md:pt-5">
+              Published On: {currentBlog?.publishDate}
+            </p>
+            <p className="pt-5 md:pt-6 lg:pt-10 leading-[1.8]">
+              {currentBlog?.description}
+            </p>
           </div>
+        </article>
 
-          {/* related Article */}
-          <div className="">
-            <h2 className="text-2xl font-semibold">Related Article</h2>
-            <div>
-              <div className="pt-6 md:pt-8 lg:pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 lg:gap-8">
-                {allBlogs?.map((blog, idx) => (
-                  <BlogCard
-                    key={idx}
-                    id={blog?.id}
-                    image={blog?.image}
-                    subTitle={blog?.subTitle}
-                    title={blog?.title}
-                    description={blog?.description}
-                  />
-                ))}
-              </div>
-            </div>
+        {/* Related Articles */}
+        <section aria-labelledby="related-articles-heading">
+          <h2 id="related-articles-heading" className="text-2xl font-semibold">
+            Related Articles
+          </h2>
+          <div className="pt-6 md:pt-8 lg:pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 lg:gap-8">
+            {allBlogs?.map((blog, idx) => (
+              <BlogCard
+                key={idx}
+                id={blog?.id}
+                image={blog?.image}
+                subTitle={blog?.subTitle}
+                title={blog?.title}
+                description={blog?.description}
+                aria-label={`Read more about ${blog?.title}`}
+              />
+            ))}
           </div>
-        </div>
+        </section>
       </div>
     </section>
   );
