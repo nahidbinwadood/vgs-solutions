@@ -467,6 +467,7 @@ export function LogoSvg() {
 export function PaginationPrevious() {
   return (
     <svg
+      className="size-5 md:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="25"
       height="24"
@@ -484,6 +485,7 @@ export function PaginationPrevious() {
 export function PaginationNext() {
   return (
     <svg
+      className="size-5 md:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="25"
       height="24"
