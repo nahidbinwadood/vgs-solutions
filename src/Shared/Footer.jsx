@@ -53,16 +53,18 @@ const Footer = () => {
     <div className="font-poppins">
       {/* Footer Top */}
       {isContactPage ? (
-        <section className="h-[300px] sm:h-[380px] md:h-[450px] lg:h-[500px] bg-primaryBg font-poppins flex w-full items-center justify-center text-center">
-          <div className="flex flex-col gap-10 w-full container mx-auto">
+        <section className=" lg:h-[500px] bg-primaryBg font-poppins flex w-full flex-col items-center justify-center text-center">
+          <div className="flex flex-col gap-10 w-full container mx-auto py-10 sm:py-16 md:py-20 lg:py-0 px-5 md:px-7">
             <div>
-              <h3 className="text-4xl font-semibold text">Follow us</h3>
-              <div className="flex items-center gap-32 justify-center mt-12 w-full">
-                <div className="flex flex-col gap-3 items-center">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text">
+                Follow us
+              </h3>
+              <div className="flex flex-col items-center gap-8 sm:flex-row lg:gap-32 justify-center mt-6 md:mt-8 lg:mt-12 w-full">
+                <div className="flex flex-col gap-3 items-center text-sm md:text-base">
                   <a
                     href="https://www.linkedin.com/"
                     target="_blank"
-                    className="p-4 w-fit bg-primaryColor rounded-full"
+                    className="p-3 md:p-4 w-fit bg-primaryColor rounded-full"
                   >
                     <LinkedinSvg />
                   </a>
@@ -70,11 +72,11 @@ const Footer = () => {
                     <p className="font-medium">VGS International Corporation</p>
                   </div>
                 </div>
-                <div className="flex flex-col gap-3 items-center">
+                <div className="flex flex-col gap-3 items-center text-sm md:text-base">
                   <a
                     href="https://x.com/"
                     target="_blank"
-                    className="p-4 w-fit bg-primaryColor rounded-full"
+                    className="p-3 md:p-4 w-fit bg-primaryColor rounded-full"
                   >
                     <TwitterSvg />
                   </a>
@@ -82,11 +84,11 @@ const Footer = () => {
                     <p className="font-medium">VGS International Corporation</p>
                   </div>
                 </div>
-                <div className="flex flex-col gap-3 items-center">
+                <div className="flex flex-col gap-3 items-center text-sm md:text-base">
                   <a
                     href="https://www.facebook.com/"
                     target="_blank"
-                    className="p-4 w-fit bg-primaryColor rounded-full"
+                    className="p-3 md:p-4 w-fit bg-primaryColor rounded-full"
                   >
                     <FacebookSvg />
                   </a>
@@ -157,7 +159,11 @@ const Footer = () => {
             <h4 className="md:text-xl font-semibold mb-3 md:mb-4">Menu</h4>
             <div className="flex flex-col gap-3">
               {navLinks?.map((link) => (
-                <Link key={link?.path} to={link?.path} className='text-sm md:text-base'>
+                <Link
+                  key={link?.path}
+                  to={link?.path}
+                  className="text-sm md:text-base"
+                >
                   {link?.title}
                 </Link>
               ))}
@@ -166,9 +172,14 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="md:text-xl font-semibold mb-3 md:mb-4">Contact us</h4>
+            <h4 className="md:text-xl font-semibold mb-3 md:mb-4">
+              Contact us
+            </h4>
             <div className="space-y-3">
-              <a href="tel:000 1556 5864" className="flex items-center gap-3 text-sm md:text-base">
+              <a
+                href="tel:000 1556 5864"
+                className="flex items-center gap-3 text-sm md:text-base"
+              >
                 <PhoneSvg />
                 000 1556 5864
               </a>
@@ -184,9 +195,11 @@ const Footer = () => {
 
           {/* Subscribe */}
           <div>
-            <h4 className="md:text-xl font-semibold mb-3 md:mb-4">Subscribe Form</h4>
+            <h4 className="md:text-xl font-semibold mb-3 md:mb-4">
+              Subscribe Form
+            </h4>
             <div>
-              <h5 className='text-sm md:text-base'>Email</h5>
+              <h5 className="text-sm md:text-base">Email</h5>
               <div>
                 <form action="">
                   <div className="flex flex-wrap md:flex-row md:items-center gap-3 mt-2">
@@ -208,7 +221,8 @@ const Footer = () => {
                 </form>
                 <div className="py-3 md:py-4">
                   <p className="leading-[1.6] text-sm md:text-base">
-                    Subscribe to our newsletter. Be always in <br className='hidden md:block' /> trend!
+                    Subscribe to our newsletter. Be always in{' '}
+                    <br className="hidden md:block" /> trend!
                   </p>
                 </div>
               </div>

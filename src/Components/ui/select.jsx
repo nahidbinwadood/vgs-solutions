@@ -16,14 +16,14 @@ const SelectTrigger = React.forwardRef(
     <SelectPrimitive.Trigger
       ref={ref}
       className={cn(
-        'flex h-14 w-full items-center justify-between rounded-md border border-[#0505050F] focus:border-[#050505CC]  bg-background px-4 py-2 ring-offset-background placeholder:text-muted-foreground focus:outline-none     disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 text-[#5A5C5F] text-base',
+        'flex h-[46px] md:h-14 w-full text-sm md:text-base items-center justify-between rounded-md border border-[#0505050F] focus:border-[#050505CC]  bg-background px-4 py-2 ring-offset-background placeholder:text-muted-foreground focus:outline-none     disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 text-[#5A5C5F]',
         className
       )}
       {...props}
     >
       {children}
       <SelectPrimitive.Icon asChild>
-        <ChevronDown className="h-4 w-4 opacity-50" />
+        <ChevronDown className="size-4 opacity-50" />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   )
@@ -40,7 +40,7 @@ const SelectScrollUpButton = React.forwardRef(
       )}
       {...props}
     >
-      <ChevronUp className="h-4 w-4" />
+      <ChevronUp className="size-4" />
     </SelectPrimitive.ScrollUpButton>
   )
 );

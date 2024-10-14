@@ -21,10 +21,10 @@ const ContactUs = () => {
         bannerImage={bannerImage}
       />
 
-      <div className="py-32 container mx-auto font-poppins">
+      <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7 font-poppins">
         <form action="">
-          <div className="flex gap-24">
-            <div className="w-1/2">
+          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-24">
+            <div className="lg:w-1/2">
               <div>
                 <img
                   src="https://s3-alpha-sig.figma.com/img/c78b/1120/66860035e475161470f3d7de8b22db58?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YaeELbxqQJmeAq2g16LaZ2fqSKpHpx6HksRlE~HXCRPB~oST9H6NGJy76iBCHiaFAN3furUYbzPlYhf2L4UMN6guaTYqR8YBzs3F7FI1QCMKGe--rr55xcx4GotdRTM~8w9d9L7jUA8D7qoyj7kmr1EPMfmVcmPSDiUe6452bW7d1IjVrUVriWfENNroQJtTgxcwHmfZ1hRBWzOJ5vDvuKzt8OtmQKuZV~bOpZwMSYI5FYxWhAlopALsr8RpUArOZWNXVMlsbo1JoltRbPzJg3eP8WAoVdSIbqSKBD4lHrfsWjoHvdi5iue2da-GcpvJe~spk~DqSjqBtISblPetYA__"
@@ -32,32 +32,32 @@ const ContactUs = () => {
                 />
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="lg:w-1/2">
               <div>
-                <h2 className="text-4xl font-semibold text-primaryColor">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl text-center md:text-start font-semibold text-primaryColor">
                   Contact us
                 </h2>
               </div>
-              <div className="pt-10 w-full space-y-5">
-                <div className="w-full flex gap-5">
+              <div className="pt-6 md:pt-8 xl:pt-10 w-full space-y-3 md:space-y-4 lg:space-y-5">
+                <div className="w-full flex flex-col md:flex-row gap-3 md:gap-4 lg:gap-5">
                   <input
-                    className="w-full focus:outline-none px-5 py-4 focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
+                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4 focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
                     placeholder="Name/Surename*"
                     type="text"
                     name="name"
                     id=""
                   />
                   <input
-                    className="w-full focus:outline-none px-5 py-4 border focus:border-[#050505CC] border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
+                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  border focus:border-[#050505CC] border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
                     placeholder="Email*"
                     type="email"
                     name="email"
                     id=""
                   />
                 </div>
-                <div className="w-full flex gap-5">
+                <div className="w-full flex flex-col md:flex-row gap-5">
                   <input
-                    className="w-full focus:outline-none px-5 py-4 focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
+                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
                     placeholder="Phone Number*"
                     type="number"
                     name="number"
@@ -81,9 +81,9 @@ const ContactUs = () => {
                     </SelectContent>
                   </Select>
                 </div>
-                <div className="w-full flex gap-5">
+                <div className="w-full flex flex-col md:flex-row gap-3 md:gap-4 lg:gap-5">
                   <input
-                    className="w-full focus:outline-none px-5 py-4 focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
+                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
                     placeholder="Company Name*"
                     type="text"
                     name="companyName"
@@ -161,7 +161,7 @@ const ContactUs = () => {
                 <div>
                   <textarea
                     rows={4}
-                    className="w-full focus:outline-none px-5 py-4 focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
+                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
                     placeholder="Message*"
                     name="message"
                     id=""
@@ -170,8 +170,8 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
-          <div className="mt-10">
-            <div className="flex flex-col gap-5">
+          <div className="mt-5 md:mt-8 lg:mt-10">
+            <div className="flex flex-col gap-3 md:gap-5">
               <label
                 htmlFor="first"
                 className="cursor-pointer flex items-start gap-2"
@@ -180,12 +180,12 @@ const ContactUs = () => {
                   type="checkbox"
                   id="first"
                   name="first"
-                  className="peer appearance-none size-[22px] mt-1 border border-green-400 rounded flex items-center justify-center"
+                  className="peer appearance-none size-4 md:size-[22px] mt-1 border border-green-400 rounded flex items-center justify-center"
                 />
-                <span className="ml-2 w-4/5 text-lg leading-[1.6]">
+                <span className="ml-2 w-4/5 lg:text-lg leading-[1.6] text-sm md:text-base">
                   Consent to the receipt of news and benefits via emails, SMS,
-                  applications, social media, telephones, and direct mails from{' '}
-                  <br />
+                  applications, social media, telephones, and direct mails from
+                  <br className='hidden md:block' />
                   VGS International Corporation Co. Ltd.
                 </span>
               </label>
@@ -197,9 +197,9 @@ const ContactUs = () => {
                   type="checkbox"
                   id="second"
                   name="first"
-                  className="peer appearance-none size-[22px] mt-1 border border-green-400 rounded flex items-center justify-center"
+                  className="peer appearance-none size-4 md:size-[22px] mt-1 border border-green-400 rounded flex items-center justify-center"
                 />
-                <span className="ml-2 w-4/5 text-lg leading-[1.6]">
+                <span className="ml-2 w-4/5 lg:text-lg leading-[1.6] text-sm md:text-base">
                   Consent to sending of my personal data to VGS’s affiliates and
                   business partners to receive news and benefits via emails,
                   <br />
@@ -207,9 +207,9 @@ const ContactUs = () => {
                 </span>
               </label>
             </div>
-            <div className='mt-8'>
-              <button type='submit'>
-                <PrimaryButton title={"Submit"} />
+            <div className="mt-4 md:mt-6 lg:mt-8">
+              <button type="submit">
+                <PrimaryButton title={'Submit'} mobile={true} universal={true} />
               </button>
             </div>
           </div>
