@@ -23,16 +23,20 @@ const AboutUs = () => {
         'https://images.unsplash.com/photo-1681569685386-b7bda397672e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Your Strategic Partner for Global Success',
       description:
-        'Choosing VGS means gaining a strategic partner that prioritizes your success. We leverage our robust network, industry insights, and local knowledge to mitigate risks and maximize opportunities, allowing you to focus on what you do best—growing your business. Let us handle the complexities of sourcing so you can thrive in the global marketplace.',
+        'Welcome to VGS - Your Trusted Partner in Global Sourcing Navigating the complexities of international business can be a daunting task. From cultural differences and language barriers to varying regulations and market dynamics, entering a foreign market poses unique challenges that can hinder your success. Companies often face uncertainties regarding sourcing quality products, ensuring compliance, and managing supply chain logistics effectively',
     },
   ];
   return (
     <section>
       {/* banner */}
-      <BannerContainer title={'About Us'} subTitle={"About Us"} bannerImage={bannerImage} />
+      <BannerContainer
+        title={'About Us'}
+        subTitle={'About Us'}
+        bannerImage={bannerImage}
+      />
 
       {/* Contents */}
-      <div className="py-32 container mx-auto">
+      <div className="py-10 md:py-16 lg:py-32 container mx-auto px-5 md:px-7">
         {/* Title */}
         <SectionTitleContainer
           title={'Simplifying Global Sourcing for'}
@@ -43,7 +47,7 @@ const AboutUs = () => {
         />
 
         {/* About Us Cards */}
-        <div>
+        <div className="flex flex-col gap-5 md:gap-8 lg:gap-10">
           {aboutUsCardInformation?.map((info) => (
             <AboutUsCard
               key={info?.title}
