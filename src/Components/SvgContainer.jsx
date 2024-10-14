@@ -1,7 +1,7 @@
 export function ReviewStarSvg() {
   return (
     <svg
-    className="size-5 md:size-auto"
+      className="size-5 md:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="25"
       height="24"
@@ -159,7 +159,7 @@ export function ClockSvg() {
 export function HeroSpinSvg() {
   return (
     <svg
-    className="size-8 sm:size-10 md:size-14 lg:size-auto"
+      className="size-8 sm:size-10 md:size-14 lg:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="68"
       height="68"
@@ -176,6 +176,7 @@ export function HeroSpinSvg() {
 export function SponsorLogo1() {
   return (
     <svg
+      className="h-5 sm:h-6 md:h-8 lg:h-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="169"
       height="40"
@@ -227,6 +228,7 @@ export function SponsorLogo1() {
 export function SponsorLogo2() {
   return (
     <svg
+      className="h-5 sm:h-6 md:h-8 lg:h-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="176"
       height="40"
@@ -263,6 +265,7 @@ export function SponsorLogo2() {
 export function SponsorLogo3() {
   return (
     <svg
+      className="h-5 sm:h-6 md:h-8 lg:h-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="176"
       height="40"
@@ -292,6 +295,7 @@ export function SponsorLogo3() {
 export function SponsorLogo4() {
   return (
     <svg
+      className="h-5 sm:h-6 md:h-8 lg:h-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="101"
       height="40"
@@ -320,6 +324,7 @@ export function SponsorLogo4() {
 export function SponsorLogo5() {
   return (
     <svg
+      className="h-5 sm:h-6 md:h-8 lg:h-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="220"
       height="40"

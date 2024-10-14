@@ -67,7 +67,7 @@ const Navbar = () => {
 
       {/* main nav */}
       <div className="container mx-auto ">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-6">
           <div className="h-6 sm:h-8 md:h-10 lg:h-16  ">
             <Link to="/">
               <img className="h-full w-full" src={logo} alt="" />

@@ -33,7 +33,7 @@ const Hero = () => {
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(0, 25, 29, 0.8), rgba(0, 25, 29, 0.6)), url(${banner})`,
       }}
-      className="2xl:h-[100vh] bg-cover bg-center bg-no-repeat text-white font-poppins"
+      className="2xl:h-[90vh] bg-cover bg-center bg-no-repeat text-white font-poppins"
     >
       <div className="container mx-auto xl:pt-32 px-5 md:px-7 py-10 sm:py-12 md:py-14 lg:py-20">
         <div className="uppercase">
@@ -54,7 +54,7 @@ const Hero = () => {
         <div className="flex lg:items-center justify-between pt-6 lg:pt-0">
           {/* review */}
           <div className="">
-            <div className="flex flex-col items-start lg:items-center gap-4 xl:gap-8">
+            <div className="flex flex-col md:flex-row items-start lg:items-center gap-4 md:gap-8">
               <div className="flex items-center w-fit relative ">
                 {reviewImages?.map((review) => (
                   <div
@@ -113,9 +113,14 @@ const Hero = () => {
         </div>
 
         {/* Cta */}
-        <div className="-mt-12 hidden">
+        <div className="xl:-mt-12 mt-2">
           <Link to="/contact-us">
-            <PrimaryButton title={'Global Offices'} variant={true} />
+            <PrimaryButton
+              title={'Global Offices'}
+              variant={true}
+              mobile={true}
+              universal={true}
+            />
           </Link>
         </div>
       </div>

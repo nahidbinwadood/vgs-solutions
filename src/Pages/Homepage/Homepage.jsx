@@ -7,14 +7,14 @@ import Sponsors from './Sections/Sponsors';
 
 const Homepage = () => {
   return (
-    <>
+    <div>
       <Hero />
       <Sponsors />
       <About />
       <Services />
       <Choose />
       <News />
-    </>
+    </div>
   );
 };
 
