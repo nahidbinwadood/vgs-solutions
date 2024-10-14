@@ -134,7 +134,7 @@ const Navbar = () => {
             </NavLink>
           ))}
 
-          <Link to="/contact-us">
+          <Link to="/contact-us" onClick={() => setOpen(!open)}>
             <PrimaryButton title={'Contact Us'} mobile={true} />
           </Link>
         </div>
