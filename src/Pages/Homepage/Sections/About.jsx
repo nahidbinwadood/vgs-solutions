@@ -3,7 +3,7 @@ import PrimaryButton from '../../../Components/PrimaryButton';
 
 const About = () => {
   return (
-    <section className="py-20 container mx-auto flex items-center">
+    <section className="py-20 container mx-auto flex items-center hidden">
       <div className="w-1/2 h-full font-poppins  flex flex-col gap-2">
         <h2 className="text-primaryColor font-semibold text-lg">About Us</h2>
         <h3 className="text-4xl font-semibold w-[85%] leading-[1.2] ">

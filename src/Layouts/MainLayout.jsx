@@ -12,7 +12,7 @@ const MainLayout = () => {
       <main className="font-poppins">
         <Outlet />
       </main>
-      <footer>
+      <footer className='hidden'>
         <Footer />
       </footer>
     </>

@@ -33,30 +33,33 @@ const Hero = () => {
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(0, 25, 29, 0.8), rgba(0, 25, 29, 0.6)), url(${banner})`,
       }}
-      className="h-[100vh] bg-cover bg-center bg-no-repeat text-white font-poppins"
+      className="2xl:h-[100vh] bg-cover bg-center bg-no-repeat text-white font-poppins"
     >
-      <div className="container mx-auto pt-32 ">
+      <div className="container mx-auto xl:pt-32 px-5 md:px-7 py-10 sm:py-12 md:py-14 lg:py-20">
         <div className="uppercase">
-          <h1 className="text-6xl leading-[1.2]">Welcome to VGS,</h1>
-          <h1 className="text-6xl font-bold leading-[1.2]">
+          <h1 className="text-2xl sm:text-3xl mb-1 md:text-4xl lg:text-5xl 2xl:text-6xl leading-snug md:leading-tight">
+            Welcome to VGS,
+          </h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold leading-snug md:leading-tight lg:leading-[1.2] xl:leading-[1.25]">
             Your Trusted partner in global <br /> supply chain solutions
           </h1>
         </div>
-        <p className="w-2/3 pt-5 text-lg">
+
+        <p className="lg:w-2/3 pt-5 text-sm md:text-base lg:text-lg">
           Experience seamless supply chain management with our expert solutions.
           We ensure cost savings, risk mitigation, and consistent quality
           through our global network of trusted suppliers.
         </p>
 
-        <div className="flex items-center justify-between">
+        <div className="flex lg:items-center justify-between pt-6 lg:pt-0">
           {/* review */}
           <div className="">
-            <div className="flex items-center gap-8">
+            <div className="flex flex-col items-start lg:items-center gap-4 xl:gap-8">
               <div className="flex items-center w-fit relative ">
                 {reviewImages?.map((review) => (
                   <div
                     key={review?.name}
-                    className="size-14 -mr-4 rounded-full border-2 border-white overflow-hidden"
+                    className="size-10 md:size-12 xl:size-14 -mr-3 md:-mr-4 rounded-full border-2 border-white overflow-hidden"
                   >
                     <img
                       className="h-full w-full object-cover"
@@ -70,17 +73,17 @@ const Hero = () => {
                 {/* stars */}
                 <div className="flex flex-col items-center justify-center gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center md:gap-1">
                       {[...Array(5)].map((_, idx) => (
                         <ReviewStarSvg key={idx} />
                       ))}
                     </div>
-                    <p>4.8</p>
+                    <p className="text-sm md:text-base">4.8</p>
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <p>from 100+</p>
-                      <Link to="/" className="underline">
+                      <p className="text-sm md:text-base">from 100+</p>
+                      <Link to="/" className="underline text-sm md:text-base">
                         reviews
                       </Link>
                     </div>
@@ -89,7 +92,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="relative w-64 h-64 flex items-center justify-center mt-5 ">
+          <div className="relative size-32 md:size-40 lg:size-52 xl:size-64 flex items-center justify-center -mt-3 md:-mt-5 lg:mt-5">
             <HeroSpinSvg />
             <div className="absolute inset-0 w-full h-full animate-spin-slow">
               <svg viewBox="0 0 100 100">
@@ -110,9 +113,9 @@ const Hero = () => {
         </div>
 
         {/* Cta */}
-        <div className='-mt-12'>
+        <div className="-mt-12 hidden">
           <Link to="/contact-us">
-            <PrimaryButton title={'Global Offices'} variant={true}/>
+            <PrimaryButton title={'Global Offices'} variant={true} />
           </Link>
         </div>
       </div>

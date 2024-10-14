@@ -6,7 +6,7 @@ import {
 
 const Choose = () => {
   return (
-    <div className="container mx-auto py-20 font-poppins">
+    <div className="container mx-auto py-20 font-poppins hidden">
       <div className="flex gap-12">
         <div className="w-1/2">
           <div className="h-full">

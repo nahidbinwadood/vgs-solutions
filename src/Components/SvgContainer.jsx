@@ -1,6 +1,7 @@
 export function ReviewStarSvg() {
   return (
     <svg
+    className="size-5 md:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="25"
       height="24"
@@ -158,6 +159,7 @@ export function ClockSvg() {
 export function HeroSpinSvg() {
   return (
     <svg
+    className="size-8 sm:size-10 md:size-14 lg:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="68"
       height="68"

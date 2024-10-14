@@ -39,7 +39,7 @@ const News = () => {
     },
   ];
   return (
-    <div className="bg-primaryBg py-20">
+    <div className="bg-primaryBg py-20 hidden">
       <div className="container mx-auto">
         <div className="flex">
           <div className="flex flex-col gap-2">

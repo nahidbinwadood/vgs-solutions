@@ -34,7 +34,7 @@ const Services = () => {
     },
   ];
   return (
-    <section className="bg-primaryBg py-20 font-poppins">
+    <section className="bg-primaryBg py-20 font-poppins hidden">
       <div className="container mx-auto">
         <div>
           <div className="text-center space-y-2">
