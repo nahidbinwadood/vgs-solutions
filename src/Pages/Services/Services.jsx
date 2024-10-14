@@ -72,7 +72,7 @@ const Services = () => {
       />
 
       {/* Contents */}
-      <div className="py-32 container mx-auto">
+      <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7">
         {/* Title */}
         <SectionTitleContainer
           title={'Comprehensive Global Sourcing Solutions'}
@@ -83,7 +83,7 @@ const Services = () => {
         />
 
         {/* Services Cards */}
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
           {ServiceCardInfo?.map((service,idx) => (
             <ServiceCard
               key={idx}

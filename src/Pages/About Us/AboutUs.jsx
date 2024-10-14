@@ -36,7 +36,7 @@ const AboutUs = () => {
       />
 
       {/* Contents */}
-      <div className="py-10 md:py-16 lg:py-32 container mx-auto px-5 md:px-7">
+      <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7">
         {/* Title */}
         <SectionTitleContainer
           title={'Simplifying Global Sourcing for'}
