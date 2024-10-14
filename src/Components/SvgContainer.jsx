@@ -18,6 +18,7 @@ export function ReviewStarSvg() {
 export function LinkedinSvg() {
   return (
     <svg
+      className="size-4 md:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
@@ -39,6 +40,7 @@ export function LinkedinSvg() {
 export function TwitterSvg() {
   return (
     <svg
+      className="size-4 md:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
@@ -55,6 +57,7 @@ export function TwitterSvg() {
 export function FacebookSvg() {
   return (
     <svg
+      className="size-4 md:size-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
@@ -427,6 +430,7 @@ export function NetworkSvg() {
 export function LogoSvg() {
   return (
     <svg
+      className="h-12 w-28"
       xmlns="http://www.w3.org/2000/svg"
       width="183"
       height="65"
