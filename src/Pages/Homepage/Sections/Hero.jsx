@@ -39,17 +39,27 @@ const Hero = () => {
       <div className="container mx-auto xl:pt-32 px-5 md:px-7 py-10 sm:py-12 md:py-14 lg:py-20">
         <header className="uppercase">
           <h1
+            data-aos="zoom-in"
+            data-aos-duration="1200"
             id="welcome-heading"
             className="text-2xl sm:text-3xl mb-1 md:text-4xl lg:text-5xl 2xl:text-6xl leading-snug md:leading-tight"
           >
             Welcome to VGS,
           </h1>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold leading-snug md:leading-tight lg:leading-[1.2] xl:leading-[1.25]">
+          <h2
+            data-aos="zoom-in"
+            data-aos-duration="1300"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold leading-snug md:leading-tight lg:leading-[1.2] xl:leading-[1.25]"
+          >
             Your Trusted Partner in Global Supply Chain Solutions
           </h2>
         </header>
 
-        <p className="lg:w-2/3 pt-5 text-sm md:text-base lg:text-lg">
+        <p
+          data-aos="zoom-in"
+          data-aos-duration="1500"
+          className="lg:w-2/3 pt-5 text-sm md:text-base lg:text-lg"
+        >
           Experience seamless supply chain management with our expert solutions.
           We ensure cost savings, risk mitigation, and consistent quality
           through our global network of trusted suppliers.
@@ -60,8 +70,10 @@ const Hero = () => {
           <div className="">
             <div className="flex flex-col md:flex-row items-start lg:items-center gap-4 md:gap-8">
               <div className="flex items-center w-fit relative">
-                {reviewImages?.map((review) => (
+                {reviewImages?.map((review, index) => (
                   <div
+                    data-aos="fade-right"
+                    data-aos-duration={1000 + index * 100}
                     key={review?.name}
                     className="size-10 md:size-12 xl:size-14 -mr-3 md:-mr-4 rounded-full border-2 border-white overflow-hidden"
                   >
@@ -78,15 +90,29 @@ const Hero = () => {
                 {/* Stars and Review Information */}
                 <div className="flex flex-col items-center justify-center gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="flex items-center md:gap-1">
+                    <div
+                      data-aos="fade-left"
+                      data-aos-duration={1200}
+                      className="flex items-center md:gap-1"
+                    >
                       {[...Array(5)].map((_, idx) => (
                         <ReviewStarSvg key={idx} />
                       ))}
                     </div>
-                    <p className="text-sm md:text-base">4.8</p>
+                    <p
+                      data-aos="fade-left"
+                      data-aos-duration={1300}
+                      className="text-sm md:text-base"
+                    >
+                      4.8
+                    </p>
                   </div>
                   <div>
-                    <div className="flex items-center gap-2">
+                    <div
+                      data-aos="fade-left"
+                      data-aos-duration={1400}
+                      className="flex items-center gap-2"
+                    >
                       <p className="text-sm md:text-base">from 100+</p>
                       <Link
                         to="/reviews"
@@ -103,7 +129,11 @@ const Hero = () => {
           </div>
 
           {/* Rotating Icon */}
-          <div className="relative size-32 md:size-40 lg:size-52 xl:size-64 flex items-center justify-center -mt-3 md:-mt-5 lg:mt-5">
+          <div
+            data-aos="fade-left"
+            data-aos-duration={1300}
+            className="relative size-32 md:size-40 lg:size-52 xl:size-64 flex items-center justify-center -mt-3 md:-mt-5 lg:mt-5"
+          >
             <HeroSpinSvg />
             <div className="absolute inset-0 w-full h-full animate-spin-slow">
               <svg viewBox="0 0 100 100">
@@ -123,7 +153,11 @@ const Hero = () => {
         </div>
 
         {/* CTA */}
-        <div className="xl:-mt-12 mt-2">
+        <div
+          data-aos="fade-right"
+          data-aos-duration={1300}
+          className="xl:-mt-12 mt-2"
+        >
           <Link
             to="/contact-us"
             aria-label="Learn more about our global offices"

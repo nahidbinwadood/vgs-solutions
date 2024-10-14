@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const BlogCard = ({ id, image, subTitle, title, description }) => {
+const BlogCard = ({ idx, id, image, subTitle, title, description }) => {
   const [finalDescription, setFinalDescription] = useState('');
 
   useEffect(() => {
@@ -11,7 +11,11 @@ const BlogCard = ({ id, image, subTitle, title, description }) => {
     }
   }, [description]);
   return (
-    <div className="bg-white p-4 md:p-5 rounded-xl shadow-[6px_6px_32px_0px_rgba(0,0,0,0.1)]">
+    <div
+      data-aos="fade-down"
+      data-aos-duration={1200 + idx * 200}
+      className="bg-white p-4 md:p-5 rounded-xl shadow-[6px_6px_32px_0px_rgba(0,0,0,0.1)]"
+    >
       <div className="h-[200px] sm:h-[230px] md:h-[275px] w-full">
         <img
           className="w-full h-full object-cover rounded-lg"

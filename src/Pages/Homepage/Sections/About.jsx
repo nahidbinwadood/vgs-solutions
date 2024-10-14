@@ -10,23 +10,35 @@ const About = () => {
       <div className="flex flex-col md:flex-row gap-6 md:items-stretch">
         <div className="md:w-1/2 font-poppins flex flex-col gap-2">
           <h2
+            data-aos="fade-right"
+            data-aos-duration="1200"
             id="about-us-heading"
             className="text-primaryColor font-semibold md:text-lg"
           >
             About Us
           </h2>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold lg:w-[85%] leading-[1.2]">
+          <h3
+            data-aos="fade-right"
+            data-aos-duration="1300"
+            className="text-2xl md:text-3xl lg:text-4xl font-semibold lg:w-[85%] leading-[1.2]"
+          >
             Simplifying Global Sourcing <br className="hidden lg:block" /> for
             Your
             <span className="text-primaryColor ml-2">Business Success</span>
           </h3>
-          <p className="text-textColor lg:w-3/4 lg:pt-3 text-sm md:text-base">
+          <p
+            data-aos="fade-right"
+            data-aos-duration="1400"
+            className="text-textColor lg:w-3/4 lg:pt-3 text-sm md:text-base"
+          >
             Navigating international business is challenging with cultural
             differences and regulations. VGS simplifies sourcing, connecting you
             with reliable suppliers, so you can focus on growing your business
             globally.
           </p>
           <Link
+            data-aos="fade-right"
+            data-aos-duration="1500"
             to="/about-us"
             aria-label="Learn more about VGS and how we simplify global sourcing for business success"
             className="pt-2 md:pt-4 lg:pt-6"
@@ -38,7 +50,11 @@ const About = () => {
             />
           </Link>
         </div>
-        <div className="md:w-1/2 flex">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          className="md:w-1/2 flex"
+        >
           <div className="w-full h-full">
             <img
               className="rounded-xl w-full h-full object-cover"

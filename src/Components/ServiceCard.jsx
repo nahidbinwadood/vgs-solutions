@@ -2,9 +2,13 @@ import { Link } from 'react-router-dom';
 import SecondaryButton from './SecondaryButton';
 
 // eslint-disable-next-line react/prop-types
-const ServiceCard = ({ title, description, image }) => {
+const ServiceCard = ({ idx, title, description, image }) => {
   return (
-    <div className="rounded-xl p-4 md:p-6 bg-white shadow-[6px_6px_32px_0px_rgba(0,0,0,0.1)]">
+    <div
+      data-aos={idx % 2 === 0 ? 'fade-right' : 'fade-left'}
+      data-aos-duration={1200 + idx * 100}
+      className="rounded-xl p-4 md:p-6 bg-white shadow-[6px_6px_32px_0px_rgba(0,0,0,0.1)]"
+    >
       <div className="flex flex-col gap-2 md:gap-4">
         <h4 className="text-xl md:text-2xl font-semibold">{title}</h4>
         <p className="text-sm md:text-base text-textColor lg:w-4/5 md:h-[110px] lg:h-[90px] xl:h-auto pb-2">

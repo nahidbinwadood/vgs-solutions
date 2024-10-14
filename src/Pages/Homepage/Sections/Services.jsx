@@ -41,15 +41,25 @@ const Services = () => {
       <div className="container mx-auto px-5 md:px-7">
         <header className="text-center space-y-1 md:space-y-2">
           <h2
+            data-aos="fade-down"
+            data-aos-duration="1200"
             id="services-heading"
             className="text-primaryColor font-semibold md:text-lg"
           >
             Our Services
           </h2>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+          <h3
+            data-aos="fade-down"
+            data-aos-duration="1300"
+            className="text-2xl md:text-3xl lg:text-4xl font-semibold"
+          >
             Comprehensive Global Sourcing Solutions for
           </h3>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primaryColor">
+          <h3
+            data-aos="fade-up"
+            data-aos-duration="1400"
+            className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primaryColor"
+          >
             Optimal Business Performance
           </h3>
         </header>
@@ -59,6 +69,7 @@ const Services = () => {
           {ServiceCardInfo?.map((service, idx) => (
             <ServiceCard
               key={idx}
+              idx={idx}
               title={service?.title}
               description={service?.description}
               image={service?.image}
@@ -67,7 +78,11 @@ const Services = () => {
         </div>
 
         {/* CTA */}
-        <div className="w-full mt-5 sm:mt-6 md:mt-8">
+        <div
+          data-aos="fade-up"
+          data-aos-duration={1200}
+          className="w-full mt-5 sm:mt-6 md:mt-8"
+        >
           <div className="flex items-center justify-center">
             <Link
               to="/services"

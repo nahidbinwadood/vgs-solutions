@@ -47,18 +47,32 @@ const News = () => {
         <div className="flex flex-col gap-2 md:flex-row sm:gap-3 md:gap-5">
           <header>
             <h2
+              data-aos="fade-right"
+              data-aos-duration={1200}
               id="news-activities-heading"
               className="md:text-lg text-primaryColor font-semibold"
             >
               News & Activities
             </h2>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+            <h3
+              data-aos="fade-right"
+              data-aos-duration={1300}
+              className="text-2xl md:text-3xl lg:text-4xl font-semibold"
+            >
               Explore Our Latest
             </h3>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primaryColor">
+            <h3
+              data-aos="fade-right"
+              data-aos-duration={1400}
+              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primaryColor"
+            >
               Updates and Activities
             </h3>
-            <p className="text-textColor lg:w-1/2 text-sm md:text-base mt-2 md:mt-3">
+            <p
+              data-aos="fade-right"
+              data-aos-duration={1500}
+              className="text-textColor lg:w-1/2 text-sm md:text-base mt-2 md:mt-3"
+            >
               Stay connected with VGS for the latest news and activities.
               Discover our achievements, industry insights, and upcoming events
               as we continue to innovate and enhance global sourcing solutions
@@ -66,7 +80,11 @@ const News = () => {
             </p>
           </header>
 
-          <div className="w-fit text-nowrap flex items-end">
+          <div
+            data-aos="fade-left"
+            data-aos-duration={1200}
+            className="w-fit text-nowrap flex items-end"
+          >
             <Link
               to="/blogs"
               aria-label="Explore our blog to see more updates and activities"
@@ -85,6 +103,7 @@ const News = () => {
           {allBlogs?.map((blog, idx) => (
             <BlogCard
               key={idx}
+              idx={idx}
               image={blog?.image}
               id={blog?.id}
               subTitle={blog?.subTitle}

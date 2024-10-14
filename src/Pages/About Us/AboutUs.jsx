@@ -2,6 +2,7 @@ import AboutUsCard from '@/Components/AboutUsCard';
 import BannerContainer from '@/Components/BannerContainer';
 import SectionTitleContainer from '@/Components/SectionTitleContainer';
 import bannerImage from '../../assets/banner-image.jpg';
+import { Helmet } from 'react-helmet';
 const AboutUs = () => {
   const aboutUsCardInformation = [
     {
@@ -27,7 +28,11 @@ const AboutUs = () => {
     },
   ];
   return (
-    <section aria-labelledby="about-us-section">
+    <section aria-labelledby="about-us-section" className='overflow-x-hidden'>
+      <Helmet>
+        <title>VGS Solutions | About Us</title>
+        <meta name="description" content="About Us" />
+      </Helmet>
       {/* Banner */}
       <BannerContainer
         title="About Us"
@@ -38,7 +43,7 @@ const AboutUs = () => {
       {/* Contents */}
       <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7">
         {/* Title */}
-        <header className="text-center">
+        <header>
           <SectionTitleContainer
             title="Simplifying Global Sourcing for"
             highlightedTitle="Your Business Success"

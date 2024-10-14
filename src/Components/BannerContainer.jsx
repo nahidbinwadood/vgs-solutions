@@ -11,18 +11,33 @@ const BannerContainer = ({ title, bannerImage, subTitle }) => {
       aria-label={`${title} Banner`}
     >
       <div>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
+        <h1
+          data-aos="zoom-in"
+          data-aos-duration={1200}
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
+        >
           {title}
         </h1>
         <nav aria-label="breadcrumb">
           <div className="flex items-center gap-3 justify-center mt-3 md:mt-5">
-            <h4 className="md:text-lg">
-              <a href="/" className="text-white hover:underline">
+            <h4
+              data-aos="zoom-in"
+              data-aos-duration={1300}
+              className="md:text-lg"
+            >
+              <a href="/" className="text-white">
                 Home
               </a>
             </h4>
-            <div className="h-3 md:h-4 w-[2px] bg-white"></div>
-            <h4 className="md:text-lg">{subTitle}</h4>
+            <div data-aos="zoom-in"
+              data-aos-duration={1250} className="h-3 md:h-4 w-[2px] bg-white"></div>
+            <h4
+              data-aos="zoom-in"
+              data-aos-duration={1400}
+              className="md:text-lg"
+            >
+              {subTitle}
+            </h4>
           </div>
         </nav>
       </div>

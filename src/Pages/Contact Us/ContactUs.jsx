@@ -10,10 +10,15 @@ import {
 } from '../../Components/ui/select';
 import bannerImage from '../../assets/contact-banner.jpg';
 import PrimaryButton from '@/Components/PrimaryButton';
+import { Helmet } from 'react-helmet';
 
 const ContactUs = () => {
   return (
-    <section aria-labelledby="contact-us-section">
+    <section aria-labelledby="contact-us-section" className="overflow-x-hidden">
+      <Helmet>
+        <title>VGS Solutions | Contact Us</title>
+        <meta name="description" content="Contact Us" />
+      </Helmet>
       {/* Banner */}
       <BannerContainer
         title="Contact us"
@@ -24,7 +29,11 @@ const ContactUs = () => {
       <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7 font-poppins">
         <form action="" aria-label="Contact Form">
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-24">
-            <div className="lg:w-1/2">
+            <div
+              data-aos="fade-right"
+              data-aos-duration={1200}
+              className="lg:w-1/2"
+            >
               <div>
                 <img
                   src="https://s3-alpha-sig.figma.com/img/c78b/1120/66860035e475161470f3d7de8b22db58?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YaeELbxqQJmeAq2g16LaZ2fqSKpHpx6HksRlE~HXCRPB~oST9H6NGJy76iBCHiaFAN3furUYbzPlYhf2L4UMN6guaTYqR8YBzs3F7FI1QCMKGe--rr55xcx4GotdRTM~8w9d9L7jUA8D7qoyj7kmr1EPMfmVcmPSDiUe6452bW7d1IjVrUVriWfENNroQJtTgxcwHmfZ1hRBWzOJ5vDvuKzt8OtmQKuZV~bOpZwMSYI5FYxWhAlopALsr8RpUArOZWNXVMlsbo1JoltRbPzJg3eP8WAoVdSIbqSKBD4lHrfsWjoHvdi5iue2da-GcpvJe~spk~DqSjqBtISblPetYA__"
@@ -37,6 +46,8 @@ const ContactUs = () => {
             <div className="lg:w-1/2">
               <div>
                 <h2
+                  data-aos="fade-left"
+                  data-aos-duration={1200}
                   id="contact-us-section"
                   className="text-2xl md:text-3xl lg:text-4xl text-center md:text-start font-semibold text-primaryColor"
                 >
@@ -44,7 +55,11 @@ const ContactUs = () => {
                 </h2>
               </div>
               <div className="pt-6 md:pt-8 xl:pt-10 w-full space-y-3 md:space-y-4 lg:space-y-5">
-                <div className="w-full flex flex-col md:flex-row gap-3 md:gap-4 lg:gap-5">
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration={1200}
+                  className="w-full flex flex-col md:flex-row gap-3 md:gap-4 lg:gap-5"
+                >
                   <label htmlFor="name" className="sr-only">
                     Name/Surname
                   </label>
@@ -69,7 +84,11 @@ const ContactUs = () => {
                   />
                 </div>
 
-                <div className="w-full flex flex-col md:flex-row gap-5">
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration={1300}
+                  className="w-full flex flex-col md:flex-row gap-5"
+                >
                   <label htmlFor="number" className="sr-only">
                     Phone Number
                   </label>
@@ -101,7 +120,11 @@ const ContactUs = () => {
                   </Select>
                 </div>
 
-                <div className="w-full flex flex-col md:flex-row gap-3 md:gap-4 lg:gap-5">
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration={1400}
+                  className="w-full flex flex-col md:flex-row gap-3 md:gap-4 lg:gap-5"
+                >
                   <label htmlFor="companyName" className="sr-only">
                     Company Name
                   </label>
@@ -130,7 +153,7 @@ const ContactUs = () => {
                   </Select>
                 </div>
 
-                <div>
+                <div data-aos="fade-left" data-aos-duration={1450}>
                   <Select aria-label="Position/Role" required>
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="What is your position/role in the company*" />
@@ -155,7 +178,7 @@ const ContactUs = () => {
                   </Select>
                 </div>
 
-                <div>
+                <div data-aos="fade-left" data-aos-duration={1500}>
                   <Select aria-label="Products/Services" required>
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="Products/service you may be interested in*" />
@@ -186,7 +209,7 @@ const ContactUs = () => {
                   </Select>
                 </div>
 
-                <div>
+                <div data-aos="fade-left" data-aos-duration={1550}>
                   <label htmlFor="message" className="sr-only">
                     Message
                   </label>
@@ -207,6 +230,8 @@ const ContactUs = () => {
           <div className="mt-5 md:mt-8 lg:mt-10">
             <div className="flex flex-col gap-3 md:gap-5">
               <label
+                data-aos="fade-left"
+                data-aos-duration={1200}
                 htmlFor="first-consent"
                 className="cursor-pointer flex items-start gap-2"
               >
@@ -226,6 +251,8 @@ const ContactUs = () => {
               </label>
 
               <label
+                data-aos="fade-right"
+                data-aos-duration={1300}
                 htmlFor="second-consent"
                 className="cursor-pointer flex items-start gap-2"
               >
@@ -245,7 +272,11 @@ const ContactUs = () => {
               </label>
             </div>
 
-            <div className="mt-4 md:mt-6 lg:mt-8">
+            <div
+              data-aos="fade-left"
+              data-aos-duration={1300}
+              className="mt-4 md:mt-6 lg:mt-8"
+            >
               <button type="submit">
                 <PrimaryButton
                   title={'Submit'}

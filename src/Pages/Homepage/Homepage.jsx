@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import About from './Sections/About';
 import Choose from './Sections/Choose';
 import Hero from './Sections/Hero';
@@ -7,7 +8,11 @@ import Sponsors from './Sections/Sponsors';
 
 const Homepage = () => {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
+      <Helmet>
+        <title>VGS Solutions | Homepage</title>
+        <meta name="description" content="Homepage" />
+      </Helmet>
       <Hero />
       <Sponsors />
       <About />

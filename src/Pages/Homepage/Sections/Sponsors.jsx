@@ -18,6 +18,8 @@ const Sponsors = () => {
 
   return (
     <section
+      data-aos="zoom-in"
+      data-aos-duration="1800"
       className="container mx-auto py-10 lg:py-16 xl:py-20 overflow-hidden px-5 md:px-7"
       aria-labelledby="sponsors-heading"
     >

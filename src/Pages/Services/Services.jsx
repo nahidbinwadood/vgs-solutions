@@ -2,6 +2,7 @@ import BannerContainer from '@/Components/BannerContainer';
 import bannerImage from '../../assets/services-banner.jpg';
 import SectionTitleContainer from '@/Components/SectionTitleContainer';
 import ServiceCard from '@/Components/ServiceCard';
+import { Helmet } from 'react-helmet';
 
 const Services = () => {
   const ServiceCardInfo = [
@@ -63,7 +64,11 @@ const Services = () => {
     },
   ];
   return (
-    <section aria-labelledby="our-services-section">
+    <section aria-labelledby="our-services-section" className='overflow-x-hidden'>
+      <Helmet>
+        <title>VGS Solutions | Services</title>
+        <meta name="description" content="Services" />
+      </Helmet>
       {/* Banner */}
       <BannerContainer
         title="Our Services"
@@ -74,7 +79,7 @@ const Services = () => {
       {/* Contents */}
       <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7">
         {/* Title */}
-        <header className="text-center">
+        <header>
           <SectionTitleContainer
             title="Comprehensive Global Sourcing Solutions"
             highlightedTitle="for Optimal Business Performance"
@@ -87,6 +92,7 @@ const Services = () => {
           {ServiceCardInfo?.map((service, idx) => (
             <ServiceCard
               key={idx}
+              idx={idx}
               title={service?.title}
               description={service?.description}
               image={service?.image}

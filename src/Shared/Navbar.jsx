@@ -33,11 +33,13 @@ const Navbar = () => {
     },
   ];
   return (
-    <header className="font-poppins mx-5 md:mx-7">
+    <header className="font-poppins overflow-x-hidden ">
       {/* Top part */}
-      <div className="bg-black hidden">
-        <div className="container mx-auto py-5 flex items-center justify-between text-white">
+      <div className="bg-black hidden lg:block ">
+        <div className="container mx-auto py-5 flex items-center justify-between text-white px-5 md:px-7">
           <nav
+            data-aos="fade-right"
+            data-aos-duration="1500"
             aria-label="Social media links"
             className="flex items-center h-full gap-5"
           >
@@ -67,7 +69,11 @@ const Navbar = () => {
             </a>
           </nav>
 
-          <div className="flex items-center gap-8">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            className="flex items-center gap-8"
+          >
             <a
               href="tel:000 1556 5864"
               className="flex items-center gap-2"
@@ -94,9 +100,13 @@ const Navbar = () => {
 
       {/* Main navigation */}
       <nav className="container mx-auto" aria-label="Main navigation">
-        <div className="flex items-center justify-between py-6">
+        <div className="flex items-center justify-between py-6 px-5 md:px-7">
           {/* Logo */}
-          <div className="h-6 sm:h-8 md:h-10 lg:h-16">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            className="h-6 sm:h-8 md:h-10 lg:h-16"
+          >
             <Link to="/" aria-label="Go to homepage">
               <img
                 className="h-full w-full"
@@ -107,7 +117,11 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Links */}
-          <div className="items-center gap-10 hidden lg:flex">
+          <div
+            data-aos="zoom-out"
+            data-aos-duration="1200"
+            className="items-center gap-10 hidden lg:flex"
+          >
             {navLinks?.map((navLink) => (
               <NavLink
                 key={navLink?.title}
@@ -125,14 +139,22 @@ const Navbar = () => {
           </div>
 
           {/* Contact Us button (Desktop) */}
-          <div className="hidden lg:flex">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1300"
+            className="hidden lg:flex"
+          >
             <Link to="/contact-us" aria-label="Go to contact us page">
               <PrimaryButton title={'Contact Us'} />
             </Link>
           </div>
 
           {/* Mobile Menu Icon */}
-          <div className="transition duration-500 lg:hidden">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            className="transition duration-500 lg:hidden"
+          >
             {!open && (
               <MdMenuOpen
                 onClick={() => setOpen(!open)}

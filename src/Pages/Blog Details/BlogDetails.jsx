@@ -3,6 +3,7 @@ import SectionTitleContainer from '@/Components/SectionTitleContainer';
 import bannerImage from '../../assets/blog-banner.jpg';
 import BlogCard from '@/Components/BlogCard';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const BlogDetails = () => {
   const allBlogs = [
@@ -72,7 +73,14 @@ const BlogDetails = () => {
   const currentBlog = allBlogs?.find((blog) => blog.id == id);
   console.log(currentBlog?.title.split(' ').length);
   return (
-    <section aria-labelledby="blog-article-section">
+    <section
+      aria-labelledby="blog-article-section"
+      className="overflow-x-hidden"
+    >
+      <Helmet>
+        <title>VGS Solutions | Blog Details</title>
+        <meta name="description" content="Blog Details" />
+      </Helmet>
       {/* Banner */}
       <BannerContainer
         title="News & Activities"
@@ -101,7 +109,11 @@ const BlogDetails = () => {
 
         {/* Blog Details */}
         <article>
-          <div className="h-[250px] sm:h-[300px] md:h-[450px] lg:h-[550px] xl:h-[600px] overflow-hidden">
+          <div
+            data-aos="fade-left"
+            data-aos-duration={1200}
+            className="h-[250px] sm:h-[300px] md:h-[450px] lg:h-[550px] xl:h-[600px] overflow-hidden"
+          >
             <img
               className="h-full w-full object-cover rounded-xl"
               src={currentBlog?.image}
@@ -110,10 +122,18 @@ const BlogDetails = () => {
             />
           </div>
           <div className="text-textColor text-sm md:text-base pb-6 sm:pb-8 md:pb-10 lg:pb-14 xl:pb-20">
-            <p className="pt-3 md:pt-5">
+            <p
+              data-aos="fade-right"
+              data-aos-duration={1200}
+              className="pt-3 md:pt-5"
+            >
               Published On: {currentBlog?.publishDate}
             </p>
-            <p className="pt-5 md:pt-6 lg:pt-10 leading-[1.8]">
+            <p
+              data-aos="fade-right"
+              data-aos-duration={1300}
+              className="pt-5 md:pt-6 lg:pt-10 leading-[1.8]"
+            >
               {currentBlog?.description}
             </p>
           </div>
@@ -121,13 +141,19 @@ const BlogDetails = () => {
 
         {/* Related Articles */}
         <section aria-labelledby="related-articles-heading">
-          <h2 id="related-articles-heading" className="text-2xl font-semibold">
+          <h2
+            data-aos="fade-right"
+            data-aos-duration={1400}
+            id="related-articles-heading"
+            className="text-2xl font-semibold"
+          >
             Related Articles
           </h2>
           <div className="pt-6 md:pt-8 lg:pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 lg:gap-8">
             {allBlogs?.map((blog, idx) => (
               <BlogCard
                 key={idx}
+                idx={idx}
                 id={blog?.id}
                 image={blog?.image}
                 subTitle={blog?.subTitle}

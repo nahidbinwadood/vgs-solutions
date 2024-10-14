@@ -3,6 +3,7 @@ import bannerImage from '../../assets/blog-banner.jpg';
 import SectionTitleContainer from '@/Components/SectionTitleContainer';
 import BlogCard from '@/Components/BlogCard';
 import { PaginationNext, PaginationPrevious } from '@/Components/SvgContainer';
+import { Helmet } from 'react-helmet';
 
 const Blog = () => {
   const allBlogs = [
@@ -75,7 +76,11 @@ const Blog = () => {
   ];
 
   return (
-    <section aria-labelledby="news-activities-section">
+    <section aria-labelledby="news-activities-section" className='overflow-x-hidden'>
+      <Helmet>
+        <title>VGS Solutions | Blogs</title>
+        <meta name="description" content="Blogs" />
+      </Helmet>
       {/* Banner */}
       <BannerContainer
         title="News & Activities"
@@ -86,7 +91,7 @@ const Blog = () => {
       {/* Contents */}
       <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7">
         {/* Title */}
-        <header className="text-center">
+        <header>
           <SectionTitleContainer
             title="Explore Our Latest"
             highlightedTitle="Updates and Activities"
@@ -98,6 +103,7 @@ const Blog = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {allBlogs?.map((blog, idx) => (
             <BlogCard
+              idx={idx}
               key={idx}
               id={blog?.id}
               image={blog?.image}
@@ -110,7 +116,11 @@ const Blog = () => {
         </div>
 
         {/* Pagination */}
-        <div className="w-full flex items-center justify-center pt-6 md:pt-8 lg:pt-10">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration={1300}
+          className="w-full flex items-center justify-center pt-6 md:pt-8 lg:pt-10"
+        >
           <nav
             aria-label="Pagination Navigation"
             className="flex items-center gap-2 sm:gap-3"
