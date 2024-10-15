@@ -119,7 +119,7 @@ const Navbar = () => {
           {/* Desktop Links */}
           <div
             data-aos="zoom-out"
-            data-aos-duration="1200"
+            data-aos-duration="1100"
             className="items-center gap-10 hidden lg:flex"
           >
             {navLinks?.map((navLink) => (
