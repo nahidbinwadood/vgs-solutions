@@ -1,6 +1,4 @@
 /* eslint-disable react/prop-types */
-import { Link } from 'react-router-dom';
-import SecondaryButton from './SecondaryButton';
 
 const AboutUsCard = ({ image, title, description }) => {
   return (
@@ -36,14 +34,6 @@ const AboutUsCard = ({ image, title, description }) => {
             {description}
           </p>
         </div>
-        <Link
-          data-aos="fade-left"
-          data-aos-duration={1400}
-          to="/contact-us"
-          aria-label="Contact us to learn more"
-        >
-          <SecondaryButton title="Contact Us" universal={true} />
-        </Link>
       </div>
     </div>
   );
