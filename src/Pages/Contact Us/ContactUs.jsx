@@ -28,8 +28,8 @@ const ContactUs = () => {
 
       <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7 font-poppins">
         <form action="" aria-label="Contact Form">
-          <div className="flex flex-col items-center justify-center lg:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-24">
-            <div className="lg:w-1/2">
+          <div className="flex flex-col items-center justify-center lg:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-24 w-full">
+            <div className="w-full lg:w-1/2">
               <div>
                 <h2
                   data-aos="fade-left"
