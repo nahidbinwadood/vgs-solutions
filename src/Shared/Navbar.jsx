@@ -1,103 +1,28 @@
+import { useState } from 'react';
+import { IoCloseSharp } from 'react-icons/io5';
+import { MdMenuOpen } from 'react-icons/md';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import PrimaryButton from '../Components/PrimaryButton';
-import { MdMenuOpen } from 'react-icons/md';
-import { IoCloseSharp } from 'react-icons/io5';
-import {
-  ClockSvg,
-  EmailSvg,
-  FacebookSvg,
-  LinkedinSvg,
-  PhoneSvg,
-  TwitterSvg,
-} from '../Components/SvgContainer';
-import { useState } from 'react';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const navLinks = [
+
     {
-      title: 'Home',
+      title: 'About Us',
       path: '/',
     },
     {
-      title: 'About Us',
-      path: '/about-us',
+      title: 'Your Expectations of Us',
+      path: '/expectations',
     },
     {
-      title: 'Services',
-      path: '/services',
-    },
-    {
-      title: 'Blog',
-      path: '/blogs',
+      title: 'Trusting Us',
+      path: '/trusting-us',
     },
   ];
   return (
-    <header className="font-poppins overflow-x-hidden ">
-      {/* Top part */}
-      <div className="bg-black hidden lg:block ">
-        <div className="container mx-auto py-5 flex items-center justify-between text-white px-5 md:px-7">
-          <nav
-            data-aos="fade-right"
-            data-aos-duration="1500"
-            aria-label="Social media links"
-            className="flex items-center h-full gap-5"
-          >
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/"
-              aria-label="Visit LinkedIn"
-            >
-              <LinkedinSvg />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://x.com/"
-              aria-label="Visit Twitter (X)"
-            >
-              <TwitterSvg />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.facebook.com/"
-              aria-label="Visit Facebook"
-            >
-              <FacebookSvg />
-            </a>
-          </nav>
-
-          <div
-            data-aos="fade-left"
-            data-aos-duration="1500"
-            className="flex items-center gap-8"
-          >
-            <a
-              href="tel:000 1556 5864"
-              className="flex items-center gap-2"
-              aria-label="Call us"
-            >
-              <PhoneSvg />
-              000 1556 5864
-            </a>
-            <a
-              href="mailto:vgs@example.com"
-              className="flex items-center gap-2"
-              aria-label="Email us"
-            >
-              <EmailSvg />
-              vgs@example.com
-            </a>
-            <p className="flex items-center gap-2">
-              <ClockSvg />
-              Mon-Fri 8.00 - 18.00
-            </p>
-          </div>
-        </div>
-      </div>
-
+    <header className="font-poppins overflow-x-hidden">
       {/* Main navigation */}
       <nav className="container mx-auto" aria-label="Main navigation">
         <div className="flex items-center justify-between py-6 px-5 md:px-7">

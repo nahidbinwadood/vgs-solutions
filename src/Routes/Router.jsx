@@ -1,11 +1,9 @@
-import AboutUs from '@/Pages/About Us/AboutUs';
-import BlogDetails from '@/Pages/Blog Details/BlogDetails';
-import Blog from '@/Pages/Blog/Blog';
 import ContactUs from '@/Pages/Contact Us/ContactUs';
-import Services from '@/Pages/Services/Services';
 import { createBrowserRouter } from 'react-router-dom';
 import Homepage from '../Pages/Homepage/Homepage';
 import MainLayout from './../Layouts/MainLayout';
+import Expectations from './../Pages/Expectations/Expectations';
+import TrustingUs from './../Pages/Trusting Us/TrustingUs';
 
 const router = createBrowserRouter([
   {
@@ -13,24 +11,16 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        index: true,
+        path: '/',
         element: <Homepage />,
       },
       {
-        path: '/about-us',
-        element: <AboutUs />,
+        path: '/expectations',
+        element: <Expectations />,
       },
       {
-        path: '/services',
-        element: <Services />,
-      },
-      {
-        path: '/blogs',
-        element: <Blog />,
-      },
-      {
-        path: '/blog-details/:id',
-        element: <BlogDetails />,
+        path: '/trusting-us',
+        element: <TrustingUs />,
       },
       {
         path: '/contact-us',

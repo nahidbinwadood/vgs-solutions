@@ -9,18 +9,33 @@ import {
 
 const Sponsors = () => {
   const sponsors = [
-    { logo: <SponsorLogo1 key="1" />, name: 'Sponsor 1' },
-    { logo: <SponsorLogo2 key="2" />, name: 'Sponsor 2' },
-    { logo: <SponsorLogo3 key="3" />, name: 'Sponsor 3' },
-    { logo: <SponsorLogo4 key="4" />, name: 'Sponsor 4' },
-    { logo: <SponsorLogo5 key="5" />, name: 'Sponsor 5' },
+    {
+      logo: 'https://www.harrisons.com.my/wp-content/uploads/2020/04/sh7.jpg',
+      name: 'Sponsor 1',
+    },
+    {
+      logo: 'https://www.harrisons.com.my/wp-content/uploads/2020/04/sh1.jpg',
+      name: 'Sponsor 2',
+    },
+    {
+      logo: 'https://www.harrisons.com.my/wp-content/uploads/2020/04/sh3.jpg',
+      name: 'Sponsor 3',
+    },
+    {
+      logo: 'https://www.harrisons.com.my/wp-content/uploads/2020/04/sh5.jpg',
+      name: 'Sponsor 4',
+    },
+    {
+      logo: 'https://www.harrisons.com.my/wp-content/uploads/2020/04/sh8.jpg',
+      name: 'Sponsor 5',
+    },
   ];
 
   return (
     <section
       data-aos="zoom-in"
       data-aos-duration="1800"
-      className="container mx-auto py-10 lg:py-16 xl:py-20 overflow-hidden px-5 md:px-7"
+      className="container mx-auto py-10 lg:py-16  overflow-hidden px-5 md:px-7"
       aria-labelledby="sponsors-heading"
     >
       {/* Heading for SEO */}
@@ -30,13 +45,12 @@ const Sponsors = () => {
 
       <Marquee autoFill={true} speed={70}>
         {[...sponsors, ...sponsors].map((item, idx) => (
-          <div key={idx} className="sm:mr-4 md:mr-20 lg:mr-32">
+          <div key={idx} className="sm:mr-4 md:mr-12 lg:mr-20">
             <figure
               aria-label={item.name}
               className="flex items-center justify-center"
             >
-              {item.logo}
-              <figcaption className="sr-only">{item.name}</figcaption>
+              <img className='h-24 w-40' src={item?.logo} alt="" />
             </figure>
           </div>
         ))}

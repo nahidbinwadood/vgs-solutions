@@ -1,45 +1,21 @@
 import { Link, useLocation } from 'react-router-dom';
 import footerBg from '../assets/footer-bg.jpg';
 import PrimaryButton from '../Components/PrimaryButton';
-import {
-  EmailSvg,
-  FacebookSvg,
-  LinkedinSvg,
-  LogoSvg,
-  PhoneSvg,
-  TwitterSvg,
-} from '../Components/SvgContainer';
+import { EmailSvg, LogoSvg } from '../Components/SvgContainer';
 const Footer = () => {
-  const socialMedia = {
-    linkedin: {
-      url: 'https://www.linkedin.com',
-      icon: <LinkedinSvg />,
-    },
-    facebook: {
-      url: 'https://www.facebook.com',
-      icon: <FacebookSvg />,
-    },
-    twitter: {
-      url: 'https://www.twitter.com',
-      icon: <TwitterSvg />,
-    },
-  };
   const navLinks = [
     {
-      title: 'Home',
+      title: 'About Us',
       path: '/',
     },
+
     {
-      title: 'About Us',
-      path: '/about-us',
+      title: 'Your Expectations of Us',
+      path: '/expectations',
     },
     {
-      title: 'Services',
-      path: '/services',
-    },
-    {
-      title: 'Blog',
-      path: '/blogs',
+      title: 'Trusting Us',
+      path: '/trusting-us',
     },
     {
       title: 'Contact',
@@ -53,88 +29,7 @@ const Footer = () => {
     <footer className="font-poppins overflow-x-hidden">
       {/* Footer Top */}
       {isContactPage ? (
-        <section
-          aria-labelledby="follow-us"
-          className="lg:h-[500px] bg-primaryBg font-poppins flex w-full flex-col items-center justify-center text-center px-5 md:px-7"
-        >
-          <div className="flex flex-col gap-10 w-full container mx-auto py-10 sm:py-16 md:py-20 lg:py-0 px-5 md:px-7">
-            <div>
-              <h2
-                data-aos="zoom-in"
-                data-aos-duration={1200}
-                id="follow-us"
-                className="text-2xl md:text-3xl lg:text-4xl font-semibold"
-              >
-                Follow us
-              </h2>
-              <nav
-                aria-label="Social media links"
-                className="flex flex-col items-center gap-8 sm:flex-row lg:gap-32 justify-center mt-6 md:mt-8 lg:mt-12 w-full"
-              >
-                <div className="flex flex-col gap-3 items-center text-sm md:text-base">
-                  <a
-                    data-aos="fade-right"
-                    data-aos-duration={1200}
-                    href="https://www.linkedin.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit our LinkedIn"
-                    className="p-3 md:p-4 w-fit bg-primaryColor rounded-full"
-                  >
-                    <LinkedinSvg />
-                  </a>
-                  <p
-                    data-aos="fade-right"
-                    data-aos-duration={1300}
-                    className="font-medium"
-                  >
-                    VGS International Corporation
-                  </p>
-                </div>
-                <div className="flex flex-col gap-3 items-center text-sm md:text-base">
-                  <a
-                    data-aos="zoom-in"
-                    data-aos-duration={1300}
-                    href="https://x.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit our Twitter"
-                    className="p-3 md:p-4 w-fit bg-primaryColor rounded-full"
-                  >
-                    <TwitterSvg />
-                  </a>
-                  <p
-                    data-aos="zoom-in"
-                    data-aos-duration={1400}
-                    className="font-medium"
-                  >
-                    VGS International Corporation
-                  </p>
-                </div>
-                <div className="flex flex-col gap-3 items-center text-sm md:text-base">
-                  <a
-                    data-aos="fade-left"
-                    data-aos-duration={1200}
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit our Facebook"
-                    className="p-3 md:p-4 w-fit bg-primaryColor rounded-full"
-                  >
-                    <FacebookSvg />
-                  </a>
-                  <p
-                    data-aos="fade-left"
-                    data-aos-duration={1300}
-                    className="font-medium"
-                  >
-                    VGS International Corporation
-                  </p>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </section>
+        ''
       ) : (
         <section
           aria-labelledby="discover"
@@ -206,24 +101,6 @@ const Footer = () => {
                 London FCTY 4TW
               </p>
             </address>
-            <nav aria-label="Social media links">
-              <div className="mt-3 md:mt-5 flex items-center gap-3">
-                {Object.values(socialMedia).map((media, idx) => (
-                  <a
-                    data-aos="fade-right"
-                    data-aos-duration={1200 + idx * 100}
-                    key={media?.url}
-                    href={media?.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit our ${media?.name}`}
-                    className="p-2 border border-white hover:bg-primaryColor hover:border-primaryColor transition duration-300 rounded-full inline-block cursor-pointer"
-                  >
-                    {media?.icon}
-                  </a>
-                ))}
-              </div>
-            </nav>
           </div>
 
           {/* NavLinks */}
@@ -264,23 +141,13 @@ const Footer = () => {
             <div className="space-y-3">
               <a
                 data-aos="fade-left"
-                data-aos-duration={1300}
-                href="tel:000 1556 5864"
-                className="flex items-center gap-3 text-sm md:text-base"
-                aria-label="Call us"
-              >
-                <PhoneSvg />
-                000 1556 5864
-              </a>
-              <a
-                data-aos="fade-left"
                 data-aos-duration={1400}
-                href="mailto:vgs@example.com"
+                href="mailto:regchew@vgsthai.com"
                 className="flex items-center gap-3 text-sm md:text-base"
                 aria-label="Email us"
               >
                 <EmailSvg />
-                vgs@example.com
+                regchew@vgsthai.com
               </a>
             </div>
           </div>
