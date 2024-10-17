@@ -3,9 +3,21 @@ import { Helmet } from 'react-helmet';
 import bannerImage from '../../assets/services-banner.jpg';
 const TrustingUs = () => {
   const trustingUsContent = [
-    'We understand that trust is fundamental to a successful partnership, and we are committed to earning and maintaining that trust with our clients.',
-    'With our knowledge and a vast network of reliable suppliers, we strive to deliver high-quality products tailored to your needs. We prioritize transparency and timely communication in all our dealings, providing clients with clear insights into our sourcing processes, timelines, and pricing.',
-    'By choosing us as your sourcing partner, you can be confident that your business is in capable, trustworthy hands. Your business is Our Business!',
+    {
+      img: 'https://media.gettyimages.com/id/682482438/photo/young-design-team-in-an-informal-meeting.jpg?s=2048x2048&w=gi&k=20&c=8kC2xusJ-WiHJuQyE6-XKR877d29PfV-rKP-_Kp5tE0=',
+      description:
+        "'We understand that trust is fundamental to a successful partnership, and we are committed to earning and maintaining that trust with our clients.'",
+    },
+    {
+      img: 'https://media.istockphoto.com/id/682482504/photo/portrait-of-a-young-office-worker.jpg?s=612x612&w=0&k=20&c=UidoOKTGIkzme_3w_a2WQZiDw_Ykh8SRBWE8IQrM53M=',
+      description:
+        'With our knowledge and a vast network of reliable suppliers, we strive to deliver high-quality products tailored to your needs. We prioritize transparency and timely communication in all our dealings, providing clients with clear insights into our sourcing processes, timelines, and pricing.',
+    },
+    {
+      img: 'https://media.istockphoto.com/id/1390434441/photo/lesbian-couple-and-their-friends-enjoy-reading-books-together-sharing-at-home-during-weekend.jpg?s=612x612&w=0&k=20&c=wlxn3pPXLGSMLiuvDbsIlG3W3yXyMSS57rLVrvD5KNs=',
+      description:
+        'By choosing us as your sourcing partner, you can be confident that your business is in capable, trustworthy hands. Your business is Our Business!',
+    },
   ];
   return (
     <section
@@ -38,13 +50,13 @@ const TrustingUs = () => {
                   <div className="w-full  :h-72 pb-5">
                     <img
                       className="w-full h-full object-cover rounded-md"
-                      src="https://media.gettyimages.com/id/682482438/photo/young-design-team-in-an-informal-meeting.jpg?s=2048x2048&w=gi&k=20&c=8kC2xusJ-WiHJuQyE6-XKR877d29PfV-rKP-_Kp5tE0="
+                      src={paragraph?.img}
                       alt=""
                     />
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm md:text-base">
-                  {paragraph}
+                  {paragraph?.description}
                 </p>
               </div>
             ))}
