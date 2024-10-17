@@ -84,22 +84,16 @@ const Footer = () => {
                 data-aos-duration={1300}
                 className="md:text-lg font-semibold"
               >
-                VGS International Corporation Co. Ltd.
+                VGS THAI CO. LTD.
               </p>
               <p
                 data-aos="fade-right"
                 data-aos-duration={1400}
-                className="md:text-lg"
+                className="md:text-lg w-full md:w-2/3"
               >
-                Longbow House, 20 Chiswell Street,
+                571 RSU Building, 9th Floor, Sukhumvit 31, Klong Tan Nuea , Wattana, Bangkok 10110. Thailand
               </p>
-              <p
-                data-aos="fade-right"
-                data-aos-duration={1500}
-                className="md:text-lg"
-              >
-                London FCTY 4TW
-              </p>
+
             </address>
           </div>
 
@@ -152,61 +146,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Subscribe Form */}
-          <div>
-            <h3
-              data-aos="fade-left"
-              data-aos-duration={1200}
-              className="md:text-xl font-semibold mb-3 md:mb-4"
-            >
-              Subscribe Form
-            </h3>
-            <form
-              data-aos="fade-left"
-              data-aos-duration={1400}
-              action="#"
-              method="POST"
-              aria-label="Newsletter Subscription"
-            >
-              <label
-                data-aos="fade-left"
-                data-aos-duration={1300}
-                htmlFor="email"
-                className="text-sm md:text-base"
-              >
-                Email
-              </label>
-              <div className="flex flex-wrap md:flex-row md:items-center gap-3 mt-2">
-                <div className="flex items-center overflow-hidden">
-                  <input
-                    className="rounded-md py-2 h-10 w-full md:w-[250px] focus:outline-none px-4 text-black text-sm"
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Your email"
-                    aria-label="Enter your email"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-primaryColor flex items-center justify-center h-10 border text-sm border-primaryColor hover:bg-transparent hover:border-white duration-500 transition px-5 text-white rounded-md w-fit"
-                  aria-label="Subscribe to newsletter"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
-            <div className="py-3 md:py-4">
-              <p
-                data-aos="fade-left"
-                data-aos-duration={1500}
-                className="leading-[1.6] text-sm md:text-base"
-              >
-                Subscribe to our newsletter. Be always in{' '}
-                <br className="hidden md:block" /> trend!
-              </p>
-            </div>
-          </div>
+
+
         </div>
 
         {/* Copyright */}

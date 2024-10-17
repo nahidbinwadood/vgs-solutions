@@ -4,7 +4,7 @@ import bannerImage from '../../assets/services-banner.jpg';
 const TrustingUs = () => {
   const trustingUsContent = [
     {
-      img: 'https://media.gettyimages.com/id/682482438/photo/young-design-team-in-an-informal-meeting.jpg?s=2048x2048&w=gi&k=20&c=8kC2xusJ-WiHJuQyE6-XKR877d29PfV-rKP-_Kp5tE0=',
+      img: 'https://media.istockphoto.com/id/1170045548/photo/businessman-people-shaking-hands-for-agreement-office-teamwork-and-cooperation-concept.jpg?s=612x612&w=0&k=20&c=9wT5-G1qU6EO2u9Lf0tZTk0BmRo2O5PLt0dIVQJbTCc=',
       description:
         "'We understand that trust is fundamental to a successful partnership, and we are committed to earning and maintaining that trust with our clients.'",
     },
