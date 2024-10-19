@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '../../Components/ui/select';
-import bannerImage from '../../assets/contact-banner.jpg';
+
 import PrimaryButton from '@/Components/PrimaryButton';
 import { Helmet } from 'react-helmet';
 

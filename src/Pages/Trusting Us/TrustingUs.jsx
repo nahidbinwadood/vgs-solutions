@@ -1,6 +1,6 @@
 import BannerContainer from '@/Components/BannerContainer';
 import { Helmet } from 'react-helmet';
-import bannerImage from '../../assets/services-banner.jpg';
+
 
 const TrustingUs = () => {
   const trustingUsContent = [

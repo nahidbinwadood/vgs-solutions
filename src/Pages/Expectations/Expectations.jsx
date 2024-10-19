@@ -1,6 +1,5 @@
 import BannerContainer from '@/Components/BannerContainer';
 import { Helmet } from 'react-helmet';
-import bannerImage from '../../assets/blog-banner.jpg';
 
 const Expectations = () => {
   const allExpectations = [
@@ -69,7 +68,7 @@ const Expectations = () => {
       <BannerContainer
         title="Your Expectations of Us"
         subTitle="Your Expectations of Us"
-        bannerImage={"https://i.imgur.com/rPqufvQ.jpeg"}
+        bannerImage={'https://i.imgur.com/rPqufvQ.jpeg'}
       />
 
       {/* Expectations */}
