@@ -20,7 +20,7 @@ const ContactUs = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000); // Show loader for 1.5 seconds
+    }, 2000); // Show loader for 1.5 seconds
 
     return () => clearTimeout(timer); // Cleanup timer
   }, []);
