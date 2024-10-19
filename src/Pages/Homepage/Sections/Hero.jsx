@@ -1,4 +1,4 @@
-import banner from '../../../assets/hero-banner.webp';
+import banner from '../../../assets/hero-banner.png';
 
 const Hero = () => {
   return (

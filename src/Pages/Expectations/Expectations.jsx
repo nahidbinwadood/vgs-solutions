@@ -1,6 +1,10 @@
 import BannerContainer from '@/Components/BannerContainer';
 import { Helmet } from 'react-helmet';
 import bannerImage from '../../assets/blog-banner.jpg';
+
+import { useEffect, useState } from 'react';
+import Loader from '@/Components/Loader';
+
 const Expectations = () => {
   const allExpectations = [
     {
@@ -55,6 +59,24 @@ const Expectations = () => {
     },
   ];
 
+  const [loading, setLoading] = useState(true); // Set initial loading state to true
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Show loader for 1.5 seconds
+
+    return () => clearTimeout(timer); // Cleanup timer
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <Loader />
+      </div>
+    ); // Center the loader with flex
+  }
+
   return (
     <section
       aria-labelledby="your-expectations-of-us-section"
@@ -71,14 +93,14 @@ const Expectations = () => {
         bannerImage={bannerImage}
       />
 
-      {/* expectations */}
+      {/* Expectations */}
       <div className="bg-gray-50 py-10 md:py-14 lg:py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {allExpectations.map((expectation, index) => (
               <div
-                data-aos={index%2===0 ?"fade-right":"fade-left"}
-                data-aos-duration={1200+index*100}
+                data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+                data-aos-duration={1200 + index * 100}
                 key={index}
                 className="bg-white shadow-lg rounded-lg p-6 border border-gray-200 transition-transform transform hover:scale-105 duration-500 cursor-pointer"
               >

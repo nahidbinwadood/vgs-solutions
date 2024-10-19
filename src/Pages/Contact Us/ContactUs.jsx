@@ -11,8 +11,28 @@ import {
 import bannerImage from '../../assets/contact-banner.jpg';
 import PrimaryButton from '@/Components/PrimaryButton';
 import { Helmet } from 'react-helmet';
+import { useEffect, useState } from 'react';
+import Loader from '@/Components/Loader';
 
 const ContactUs = () => {
+  const [loading, setLoading] = useState(true); // Set initial loading state to true
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Show loader for 1.5 seconds
+
+    return () => clearTimeout(timer); // Cleanup timer
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <Loader className="animate-spin h-12 w-12 text-primaryColor" />
+      </div>
+    ); // Center the loader with flex
+  }
+
   return (
     <section aria-labelledby="contact-us-section" className="overflow-x-hidden">
       <Helmet>
