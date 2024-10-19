@@ -1,8 +1,7 @@
 import BannerContainer from '@/Components/BannerContainer';
 import { Helmet } from 'react-helmet';
 import bannerImage from '../../assets/services-banner.jpg';
-import { useEffect, useState } from 'react';
-import Loader from '@/Components/Loader';
+
 const TrustingUs = () => {
   const trustingUsContent = [
     {
@@ -22,24 +21,6 @@ const TrustingUs = () => {
     },
   ];
 
-  const [loading, setLoading] = useState(true); // Set initial loading state to true
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // Show loader for 1.5 seconds
-
-    return () => clearTimeout(timer); // Cleanup timer
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-         <Loader />
-      </div>
-    ); // Center the loader with flex
-  }
-
   return (
     <section
       aria-labelledby="trusting-us-section"
@@ -53,7 +34,7 @@ const TrustingUs = () => {
       <BannerContainer
         title="Trusting Us"
         subTitle="Trusting Us"
-        bannerImage={bannerImage}
+        bannerImage={'https://i.imgur.com/E6pdILH.jpeg'}
       />
 
       {/* expectations */}

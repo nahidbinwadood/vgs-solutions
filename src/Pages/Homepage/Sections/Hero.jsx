@@ -1,4 +1,3 @@
-import banner from '../../../assets/hero-banner.png';
 
 const Hero = () => {
   return (
@@ -6,11 +5,11 @@ const Hero = () => {
     aria-labelledby="welcome-heading"
     className="bg-cover bg-center bg-no-repeat text-white font-poppins"
     style={{
-      backgroundImage: `linear-gradient(180deg, rgba(0, 25, 29, 0.8), rgba(0, 25, 29, 0.6)), url(${banner})`,
+      backgroundImage: `linear-gradient(180deg, rgba(0, 25, 29, 0.8), rgba(0, 25, 29, 0.6)), url('https://i.imgur.com/3vNKR2D.png')`,
     }}
   >
     {/* Your content goes here */}
- 
+
 
       <div className="container mx-auto   px-5 md:px-7 py-10 sm:py-12 md:py-14 lg:py-20 xl:py-32">
         <header className="uppercase">
