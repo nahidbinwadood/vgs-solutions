@@ -1,4 +1,5 @@
 import BannerContainer from '@/Components/BannerContainer';
+import { CgSpinnerTwo } from 'react-icons/cg';
 import {
   Select,
   SelectContent,
@@ -8,12 +9,45 @@ import {
   SelectTrigger,
   SelectValue,
 } from '../../Components/ui/select';
-
-import PrimaryButton from '@/Components/PrimaryButton';
 import { Helmet } from 'react-helmet';
+import { useForm } from 'react-hook-form';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 const ContactUs = () => {
+  const { register, handleSubmit } = useForm();
+  const [country, setCountry] = useState();
+  const [loading, setLoading] = useState(false);
+  const form = useRef();
+  const onsubmit = (data) => {
+    const { name, email, number, companyName, message } = data;
+    const userInfo = { name, email, country, number, companyName, message };
+    setLoading(true);
+    // email js:
 
+    emailjs
+      .send(
+        'service_1qlne5y',
+        'template_zsxh2ca',
+        userInfo,
+        't246Lj27D515OvBzD'
+      )
+      .then((res) => {
+        if (res.status === 200) {
+          toast.success('Your message sent successfully!');
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+  };
+
+  const handleSelectCountry = (value) => {
+    setCountry(value);
+  };
   return (
     <section aria-labelledby="contact-us-section" className="overflow-x-hidden">
       <Helmet>
@@ -24,11 +58,16 @@ const ContactUs = () => {
       <BannerContainer
         title="Contact us"
         subTitle="Contact"
-        bannerImage={"https://i.imgur.com/OXNYkXi.jpeg"}
+        bannerImage={'https://i.imgur.com/OXNYkXi.jpeg'}
       />
 
       <div className="py-8 md:py-16 2xl:py-32 container mx-auto px-5 md:px-7 font-poppins">
-        <form action="" aria-label="Contact Form">
+        <form
+          ref={form}
+          onSubmit={handleSubmit(onsubmit)}
+          action=""
+          aria-label="Contact Form"
+        >
           <div className="flex flex-col items-center justify-center lg:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-24 w-full">
             <div className="w-full lg:w-1/2">
               <div>
@@ -51,7 +90,8 @@ const ContactUs = () => {
                     Name/Surname
                   </label>
                   <input
-                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4 focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
+                    {...register('name', { required: true })}
+                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4 focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-black "
                     placeholder="Name/Surname*"
                     type="text"
                     name="name"
@@ -62,7 +102,8 @@ const ContactUs = () => {
                     Email
                   </label>
                   <input
-                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  border focus:border-[#050505CC] border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
+                    {...register('email', { required: true })}
+                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  border focus:border-[#050505CC] border-[#0505050F] rounded-md placeholder:text-black"
                     placeholder="Email*"
                     type="email"
                     name="email"
@@ -76,7 +117,8 @@ const ContactUs = () => {
                     Phone Number
                   </label>
                   <input
-                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
+                    {...register('number', { required: true })}
+                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-black"
                     placeholder="Phone Number*"
                     type="number"
                     name="number"
@@ -84,7 +126,11 @@ const ContactUs = () => {
                     required
                   />
 
-                  <Select aria-label="Select Country" required>
+                  <Select
+                    onValueChange={handleSelectCountry}
+                    aria-label="Select Country"
+                    required
+                  >
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="Select Country*" />
                     </SelectTrigger>
@@ -108,7 +154,8 @@ const ContactUs = () => {
                     Company Name
                   </label>
                   <input
-                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
+                    {...register('companyName', { required: true })}
+                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-black "
                     placeholder="Company Name*"
                     type="text"
                     name="companyName"
@@ -122,8 +169,9 @@ const ContactUs = () => {
                     Message
                   </label>
                   <textarea
+                    {...register('message', { required: true })}
                     rows={4}
-                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-[#5A5C5F]"
+                    className="w-full focus:outline-none px-5 py-3 md:py-4 text-sm md:text-base lg:py-4  focus:border-[#050505CC] border border-[#0505050F] rounded-md placeholder:text-black "
                     placeholder="Message*"
                     name="message"
                     id="message"
@@ -136,12 +184,16 @@ const ContactUs = () => {
                 data-aos-duration={1300}
                 className="mt-4 md:mt-6 lg:mt-8"
               >
-                <button type="submit">
-                  <PrimaryButton
-                    title={'Submit'}
-                    mobile={true}
-                    universal={true}
-                  />
+                <button
+                  className={`bg-primaryColor flex items-center justify-center h-10 md:h-[50px] border sm:py-3 sm:px-6 w-full md:w-40 md:px-7 px-8 py-3 border-primaryColor duration-500 transition text-white rounded-sm md:rounded-md
+                           hover:text-primaryColor hover:bg-transparent text-xs sm:text-sm md:text-base lg:text-lg`}
+                  aria-label={'Submit'}
+                >
+                  {loading ? (
+                    <CgSpinnerTwo className="size-6 animate-spin" />
+                  ) : (
+                    'Submit'
+                  )}
                 </button>
               </div>
             </div>

@@ -1,4 +1,3 @@
-import { SyncLoader } from 'react-spinners';
 import logo from "../assets/logo.png"
 
 const Loader = () => {
