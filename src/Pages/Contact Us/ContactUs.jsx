@@ -16,7 +16,7 @@ import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 
 const ContactUs = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit,reset  } = useForm();
   const [country, setCountry] = useState();
   const [loading, setLoading] = useState(false);
   const form = useRef();
@@ -37,6 +37,7 @@ const ContactUs = () => {
         if (res.status === 200) {
           toast.success('Your message sent successfully!');
           setLoading(false);
+          reset()
         }
       })
       .catch((err) => {
