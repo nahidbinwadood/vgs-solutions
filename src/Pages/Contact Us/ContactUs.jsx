@@ -16,7 +16,7 @@ import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 
 const ContactUs = () => {
-  const { register, handleSubmit,reset  } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const [country, setCountry] = useState();
   const [loading, setLoading] = useState(false);
   const form = useRef();
@@ -28,16 +28,16 @@ const ContactUs = () => {
 
     emailjs
       .send(
-        'service_1qlne5y',
-        'template_zsxh2ca',
+        'service_gbkkw4q',
+        'template_05qji2x',
         userInfo,
-        't246Lj27D515OvBzD'
+        'WKooJrC5laBR1VmBK'
       )
       .then((res) => {
         if (res.status === 200) {
           toast.success('Your message sent successfully!');
           setLoading(false);
-          reset()
+          reset();
         }
       })
       .catch((err) => {
@@ -138,13 +138,61 @@ const ContactUs = () => {
                     <SelectContent>
                       <SelectGroup>
                         <SelectLabel>Country</SelectLabel>
+                        <SelectItem value="Afghanistan">Afghanistan</SelectItem>
+                        <SelectItem value="Armenia">Armenia</SelectItem>
+                        <SelectItem value="Azerbaijan">Azerbaijan</SelectItem>
+                        <SelectItem value="Bahrain">Bahrain</SelectItem>
+                        <SelectItem value="Bangladesh">Bangladesh</SelectItem>
+                        <SelectItem value="Bhutan">Bhutan</SelectItem>
+                        <SelectItem value="Brunei">Brunei</SelectItem>
+                        <SelectItem value="Cambodia">Cambodia</SelectItem>
                         <SelectItem value="China">China</SelectItem>
+                        <SelectItem value="Cyprus">Cyprus</SelectItem>
+                        <SelectItem value="Georgia">Georgia</SelectItem>
                         <SelectItem value="India">India</SelectItem>
-                        <SelectItem value="United States">
-                          United States
-                        </SelectItem>
                         <SelectItem value="Indonesia">Indonesia</SelectItem>
-                        <SelectItem value="Russia">Russia</SelectItem>
+                        <SelectItem value="Iran">Iran</SelectItem>
+                        <SelectItem value="Iraq">Iraq</SelectItem>
+                        <SelectItem value="Israel">Israel</SelectItem>
+                        <SelectItem value="Japan">Japan</SelectItem>
+                        <SelectItem value="Jordan">Jordan</SelectItem>
+                        <SelectItem value="Kazakhstan">Kazakhstan</SelectItem>
+                        <SelectItem value="Kuwait">Kuwait</SelectItem>
+                        <SelectItem value="Kyrgyzstan">Kyrgyzstan</SelectItem>
+                        <SelectItem value="Laos">Laos</SelectItem>
+                        <SelectItem value="Lebanon">Lebanon</SelectItem>
+                        <SelectItem value="Malaysia">Malaysia</SelectItem>
+                        <SelectItem value="Maldives">Maldives</SelectItem>
+                        <SelectItem value="Mongolia">Mongolia</SelectItem>
+                        <SelectItem value="Myanmar">Myanmar</SelectItem>
+                        <SelectItem value="Nepal">Nepal</SelectItem>
+                        <SelectItem value="North Korea">North Korea</SelectItem>
+                        <SelectItem value="Oman">Oman</SelectItem>
+                        <SelectItem value="Pakistan">Pakistan</SelectItem>
+                        <SelectItem value="Palestine">Palestine</SelectItem>
+                        <SelectItem value="Philippines">Philippines</SelectItem>
+                        <SelectItem value="Qatar">Qatar</SelectItem>
+                        <SelectItem value="Saudi Arabia">
+                          Saudi Arabia
+                        </SelectItem>
+                        <SelectItem value="Singapore">Singapore</SelectItem>
+                        <SelectItem value="South Korea">South Korea</SelectItem>
+                        <SelectItem value="Sri Lanka">Sri Lanka</SelectItem>
+                        <SelectItem value="Syria">Syria</SelectItem>
+                        <SelectItem value="Taiwan">Taiwan</SelectItem>
+                        <SelectItem value="Tajikistan">Tajikistan</SelectItem>
+                        <SelectItem value="Thailand">Thailand</SelectItem>
+                        <SelectItem value="Timor-Leste">Timor-Leste</SelectItem>
+                        <SelectItem value="Turkey">Turkey</SelectItem>
+                        <SelectItem value="Turkmenistan">
+                          Turkmenistan
+                        </SelectItem>
+                        <SelectItem value="United Arab Emirates">
+                          United Arab Emirates
+                        </SelectItem>
+                        <SelectItem value="Uzbekistan">Uzbekistan</SelectItem>
+                        <SelectItem value="Vietnam">Vietnam</SelectItem>
+                        <SelectItem value="Yemen">Yemen</SelectItem>
                       </SelectGroup>
                     </SelectContent>
                   </Select>
