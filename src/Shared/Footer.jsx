@@ -91,9 +91,9 @@ const Footer = () => {
                 data-aos-duration={1400}
                 className="md:text-lg w-full md:w-2/3"
               >
-                571 RSU Building, 9th Floor, Sukhumvit 31, Klong Tan Nuea , Wattana, Bangkok 10110. Thailand
+                571 RSU Building, 9th Floor, Sukhumvit 31, Klong Tan Nuea ,
+                Wattana, Bangkok 10110. Thailand
               </p>
-
             </address>
           </div>
 
@@ -136,18 +136,15 @@ const Footer = () => {
               <a
                 data-aos="fade-left"
                 data-aos-duration={1400}
-                href="mailto:regchew@vgsthai.com"
+                href="mailto: contact@vgsthai.com"
                 className="flex items-center gap-3 text-sm md:text-base"
                 aria-label="Email us"
               >
                 <EmailSvg />
-                regchew@vgsthai.com
+                contact@vgsthai.com
               </a>
             </div>
           </div>
-
-
-
         </div>
 
         {/* Copyright */}
